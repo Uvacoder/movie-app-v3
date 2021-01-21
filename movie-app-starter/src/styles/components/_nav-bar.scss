@@ -21,7 +21,7 @@
     grid-template-areas: "home home-name";
     justify-content: space-between;
     margin-top: 25px;
-    
+
 }
 .side-favourites-button {
     display: grid;
@@ -40,7 +40,15 @@
     background-color: $darkTeal;
 }
 
-.nav-bar-styling {
-  
-    
+.nav-bar-logo {
+    position: absolute;
+    right: 20px;
+}
+
+.nav-bar-logo img {
+    width: 250px;
+}
+
+.nav {
+    width: 50%;
 }

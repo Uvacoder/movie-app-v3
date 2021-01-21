@@ -85,6 +85,7 @@ class Movie extends Component {
                         </SixColGrid>
                     </div>
                     : null}
+                
                 {!this.state.actors && !this.state.loading ? <h1>Sorry, no movie was found.</h1> : null}
                 {this.state.loading ? <Spinner /> : null}
             </div>
