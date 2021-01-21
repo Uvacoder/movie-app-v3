@@ -1,54 +1,40 @@
 // Nav
+// Logo for Sidemenu
+.side-home-logo,
+.side-favourites-logo,
+.side-about-logo img {
+    width: 70px;
+    margin-right: 10px;
+}
 
-    .side-home-logo,
-    .side-favourites-logo,
-    .side-about-logo img {
-        width: 30px;
-        margin-right: 10px;
-    }
+/* Navigation Names */
+.side-home-name,
+.side-favourites-name,
+.side-about-name {
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
 
-    .side-home-logo {
-        grid-area: home;
-    }
-    .side-favourites-logo {
-        grid-area: favourites;
-    }
-    .side-about-logo {
-        grid-area: about;
-    }
-    /* Navigation Names */
-    .side-home-name,
-    .side-favourites-name,
-    .side-about-name {
-        text-transform: uppercase;
-        font-size: 1em;
-    }
-    .side-home-name {
-        grid-area: home-name;
-    }
-    .side-favourites-name {
-        grid-area: favourites-name;
-    }
-    .side-about-name {
-        grid-area: about-name;
-    }
-    /* Grids for Each Row */
-    .side-home-button {
-        display: grid;
-        grid-template-areas: "home home-name";
-        justify-content: space-between;
-        margin-top: 25px;
-    }
-    .side-favourites-button {
-        display: grid;
-        grid-template-areas: "favourites favourites-name";
-        justify-content: space-between;
-        margin-top: 25px;
-    }
-    .side-about-button {
-        display: grid;
-        grid-template-areas: "about about-name";
-        justify-content: space-between;
-        margin-top: 25px;
-    }
+/* Grids for Each Row */
+.side-home-button {
+    display: grid;
+    grid-template-areas: "home home-name";
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.side-favourites-button {
+    display: grid;
+    grid-template-areas: "favourites favourites-name";
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.side-about-button {
+    display: grid;
+    grid-template-areas: "about about-name";
+    justify-content: space-between;
+    margin-top: 25px;
+}
 
+.side-nav__container {
+    background-color: $darkTeal;
+}

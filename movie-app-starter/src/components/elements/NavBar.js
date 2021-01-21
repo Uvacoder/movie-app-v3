@@ -35,8 +35,16 @@ const NavBar = (props) => {
  
   return (
     <div className="nav-bar-styling">
-      <MenuIcon onClick={() => setShowNav(true)} />
-      <SideNav showNav={showNav} onHideNav={() => setShowNav(false)} title={title} items={navItems} />
+        <MenuIcon onClick={() => setShowNav(true)} />
+        <SideNav  
+            showNav={showNav} 
+            onHideNav={() => setShowNav(false)}
+            title={title} 
+            items={navItems}
+            titleStyle={{backgroundColor: '#707793' }}
+            itemStyle={{ backgroundColor: '#1f2833' }}
+            itemHoverStyle={{ backgroundColor: '#707793' }}
+            navStyle={{ backgroundColor: '#1f2833' }} />
     </div>
   );
 
