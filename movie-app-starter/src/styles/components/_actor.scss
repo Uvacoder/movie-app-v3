@@ -7,29 +7,32 @@
   width: 100%;
   height: auto;
   float: left;
+  margin: 0px 0px 10px 0px;
   box-sizing: border-box;
 }
 
 .actor-name {
   font-family: "Roboto", sans-serif;
-  font-size: 22px;
-  color: #fff;
-  float: left;
-  margin: 10px 20px;
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  display: block;
+  margin: 0px 0px 10px 10px;
   width: 40%;
   box-sizing: border-box;
   text-transform: uppercase;
-  font-weight: 700;
 }
 
 .actor-character {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  color: #fff;
-  float: left;
-  margin: 0 20px 10px 20px;
-  width: 40%;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: white;
+  display: block;
+  margin: 0px 0px 10px 10px;
+  width: 80%;
   box-sizing: border-box;
+  font-style: italic;
 }
 
 .movie-grid h1 {

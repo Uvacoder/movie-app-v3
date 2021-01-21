@@ -3,6 +3,23 @@ import { IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config';
 import MovieThumb from './MovieThumb';
 
 // shows the main movie info (title, overview, rating, etc) on a single movie page
+
+/*
+    To Include:
+      [x] Title
+      [ ] Genres    <============
+      [x] Overview
+      [x] Rating
+      [x] Director
+      [x] Runtime
+      [x] Budget
+      [x] Revenue
+      [] Favorite Button    <============
+      [x] Actors (Media)
+      [ ] Related Movies ?    <============
+
+*/
+
 const MovieInfo = (props) => {
   return (
 

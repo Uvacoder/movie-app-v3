@@ -9,6 +9,16 @@
   animation: animateMovieinfo 1s;
 }
 
+.moviethumb-title {
+  color: white;
+  margin: 5px;
+}
+
+.moviethumb-rating {
+  color: white;
+  margin: 5px;
+}
+
 @keyframes animateMovieinfo {
   from {
     opacity: 0;
@@ -64,6 +74,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 26px;
+  font-weight: 600;
 }
 
 .rating {

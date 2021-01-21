@@ -6,6 +6,7 @@ import MovieThumb from '../elements/MovieThumb';
 import LoadMoreBtn from '../elements/LoadMoreBtn';
 import Spinner from '../elements/Spinner';
 
+
 // home page
 // - has the computing and functions
 // - imports the visual components (searchbar, etc)
@@ -94,6 +95,7 @@ class Home extends Component {
                                 image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
                                 movieId={element.id}
                                 movieName={element.original_title}
+                                movieRating={element.vote_average}
                             />
                         })}
                     </SixColGrid>
