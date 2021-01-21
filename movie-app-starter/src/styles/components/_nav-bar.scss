@@ -1,46 +1,10 @@
 // Nav
 
-.main-navigation {
-    position: absolute;
-    z-index: auto;
-    background-color: $darkTeal;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 1000px;
-    transform: translateX(200%);
-    transition: transform 0.3s ease;
-
-    .show & {
-        transform: translateX(100%);
-    }
-
-    img {
-        width: 200px;
-    }
-    .side-logo-button {
-        background-color: $lilac;
-        padding: 30px;
-    }
-    /* Search */
-    .side-menu-search {
-        display: none;
-    }
-    /* Side Menu Nav */
-    .side-menu-nav {
-        padding: 25px;
-    }
     .side-home-logo,
     .side-favourites-logo,
-    .side-about-logo {
-        width: 20px;
+    .side-about-logo img {
+        width: 30px;
         margin-right: 10px;
-    }
-    .side-home-logo,
-    .side-favourites-logo,
-    .side-about-logo,
-    &:hover {
-        color: $lilac;
     }
 
     .side-home-logo {
@@ -88,55 +52,3 @@
         margin-top: 25px;
     }
 
-    @media (min-width: $tablet) {
-        position: fixed;
-        transform: initial;
-        width: 200px;
-        height: 100vh;
-        .show & {
-            transform: initial;
-        }
-        padding: 0px;
-
-        /* Logo */
-        .side-logo-button {
-            background-color: $darkLilac;
-            padding: 25px;
-        }
-
-        /* Search */
-        .side-menu-search {
-            display: block;
-            background-color: $lilac;
-            padding: 5px 25px 5px 25px;
-        }
-        .side-menu-search-icon {
-            width: 35px;
-        }
-
-        /* Side Menu Nav */
-        .side-menu-nav {
-            padding: 25px;
-        }
-
-        /* Grids for Each Row */
-        .side-home-button {
-            display: grid;
-            grid-template-areas: "home home-name";
-            justify-content: left;
-            margin-top: 25px;
-        }
-        .side-favourites-button {
-            display: grid;
-            grid-template-areas: "favourites favourites-name";
-            justify-content: left;
-            margin-top: 25px;
-        }
-        .side-about-button {
-            display: grid;
-            grid-template-areas: "about about-name";
-            justify-content: left;
-            margin-top: 25px;
-        }
-    }
-}
