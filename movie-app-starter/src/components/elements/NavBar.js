@@ -34,9 +34,9 @@ const NavBar = (props) => {
     ];
 
     const title = <div className="nav-bar-logo">
-                        <Link to={'/'}><img className="side-logo" src="/../images/database_logo_green.png" alt='Movie Database Logo' /></Link>
-                    </div>
-   
+        <Link to={'/'}><img className="side-logo" src="/../images/database_logo_green.png" alt='Movie Database Logo' /></Link>
+    </div>
+
 
 
     return (
@@ -48,24 +48,24 @@ const NavBar = (props) => {
                 onHideNav={() => setShowNav(false)}
                 title={title}
                 items={navItems}
-                titleStyle={{ 
-                            backgroundColor: "#707793",
-                            height: "180px",
-                            }}
-                itemStyle={{ 
-                            backgroundColor: '#1f2833',
-                            listStyleType: "none",
-                            marginBottom: "10px", 
-                            marginTop: "-16px",
-                            marginLeft: "-40px",
+                titleStyle={{
+                    backgroundColor: "#707793",
+                    height: "180px",
+                }}
+                itemStyle={{
+                    backgroundColor: '#1f2833',
+                    listStyleType: "none",
+                    marginBottom: "10px",
+                    marginTop: "-16px",
+                    marginLeft: "-40px",
 
-                            height: "80px"
-                            }}
+                    height: "80px"
+                }}
                 itemHoverStyle={{ backgroundColor: '#707793' }}
-                navStyle={{ 
-                            backgroundColor: '#1f2833',
-                            width: "300px"
-                        }} />
+                navStyle={{
+                    backgroundColor: '#1f2833',
+                    width: "300px"
+                }} />
         </div>
     );
 
