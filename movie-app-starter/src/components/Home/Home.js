@@ -21,17 +21,22 @@ class Home extends Component {
         searchTerm: ''
     }
 
+    // check if component has mounted
     componentDidMount() {
         if (localStorage.getItem('HomeState')) {
             const state = JSON.parse(localStorage.getItem('HomeState'));
             this.setState({ ...state });
         } else {
             this.setState({ loading: true });
+            // Specify API URL (Start by calling the popular movies first)
+            // URL first, then API ket
             const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+            // send endpoint to the method
             this.fetchItems(endpoint);
         }
     }
 
+    // search functinality 
     searchItems = (searchTerm) => {
         let endpoint = '';
         this.setState({
@@ -48,23 +53,30 @@ class Home extends Component {
         this.fetchItems(endpoint);
     }
 
+    // populates more popular movies 
     loadMoreItems = () => {
         let endpoint = '';
         this.setState({ loading: true });
 
         if (this.state.searchTerm === '') {
+            // will load more popular movies (on home page)
             endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`;
         } else {
+            // will load more movies on the searched page
             endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`;
         }
         this.fetchItems(endpoint);
     }
 
+    // feth items methods
     fetchItems = (endpoint) => {
         fetch(endpoint)
+            // (then, waits for the result) use json to convert results from the raw data
             .then(result => result.json())
             .then(result => {
+                // get data into state
                 this.setState({
+                    // load new movies while appeneding the movies to the older ones
                     movies: [...this.state.movies, ...result.results],
                     loading: false,
                     currentPage: result.page,
