@@ -5,6 +5,8 @@ import Footer from '../elements/Footer';
 import Home from '../Home/Home';
 import Movie from '../Movie/Movie';
 import NotFound from '../elements/NotFound';
+import Favourites from '../elements/Favourites';
+import About from '../elements/About';
 
 const App = () => {
 
@@ -15,6 +17,8 @@ const App = () => {
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/:movieId" component={Movie} exact />
+          <Route path={'/about'}><About /></Route>
+          <Route path={'/favourites'}><Favourites /></Route>
           <Route component={NotFound} />
         </Switch>
         <Footer></Footer>

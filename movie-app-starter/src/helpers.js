@@ -1,13 +1,15 @@
 // helper functions to allow us to show movie stats
 
-// Convert time to hours and minutes
+// runtime stats
+// convert time to hours and minutes
 export const calcTime = (time) => {
   const hours = Math.floor(time / 60);
   const mins = time % 60;
   return `${hours}h ${mins}m`;
 }
 
-// Convert a number to $ format
+// budget/ revenue stats
+// convert a number to $ format
 export const convertMoney = (money) => {
   var formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',

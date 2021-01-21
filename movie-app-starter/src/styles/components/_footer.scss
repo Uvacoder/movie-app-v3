@@ -7,7 +7,7 @@ footer {
     hr {
         border: 0;
         height: 1px;
-        background: #333;
+        background: $darkLilac;
         background-image: linear-gradient(to right, $darkIndigo, $darkBlue, $darkIndigo);
         margin: 25px 0px 75px 0px;
     }
@@ -16,6 +16,7 @@ footer {
         font-size: 0.9em;
         color: $lilac;
         line-height: 1.5;
+        font-weight: 600;
     }
 
     .social {

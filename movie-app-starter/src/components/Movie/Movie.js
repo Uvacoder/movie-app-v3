@@ -11,6 +11,12 @@ import Spinner from '../elements/Spinner';
 // - has the computing and functions
 // - imports the visual components (searchbar, etc)
 
+// TO ADD:
+// - release date
+// - genres (crime, drama, thriller?)
+// - related movies (maybe?)
+// - add full favorites button when hover over (take code from footer.js)
+
 class Movie extends Component {
     state = {
         movie: null,
@@ -79,7 +85,7 @@ class Movie extends Component {
                         </SixColGrid>
                     </div>
                     : null}
-                {!this.state.actors && !this.state.loading ? <h1>No Movie Found!</h1> : null}
+                {!this.state.actors && !this.state.loading ? <h1>Sorry, no movie was found.</h1> : null}
                 {this.state.loading ? <Spinner /> : null}
             </div>
         )

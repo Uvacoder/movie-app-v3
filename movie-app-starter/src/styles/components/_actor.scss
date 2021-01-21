@@ -4,7 +4,7 @@
 }
 
 .actor img {
-  width: 40%;
+  width: 100%;
   height: auto;
   float: left;
   box-sizing: border-box;
@@ -19,6 +19,7 @@
   width: 40%;
   box-sizing: border-box;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .actor-character {
@@ -38,4 +39,5 @@
   text-transform: uppercase;
   margin: 5px 0px;
   padding: 0px 0px 25px 0px;
+  color: $green;
 }
