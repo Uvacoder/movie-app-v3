@@ -3,8 +3,8 @@
 .side-home-logo,
 .side-favourites-logo,
 .side-about-logo img {
-    width: 60px;
-    margin-right: 10px;
+    width: 40px;
+    //margin-right: 10px;
 }
 
 /* Navigation Names */
@@ -13,27 +13,44 @@
 .side-about-name {
     text-transform: uppercase;
     font-size: 1.3em;
+    font-weight: bold;
 }
 
 /* Grids for Each Row */
 .side-home-button {
-    display: grid;
-    grid-template-areas: "home home-name";
+    margin-left: 0;
+    display: flex;
     justify-content: space-between;
-    margin-top: 25px;
+}
 
+.side-home-name {
+    margin-top: 5px;
 }
 .side-favourites-button {
+    display: flex;
+    justify-content: space-between;
+    /*
     display: grid;
     grid-template-areas: "favourites favourites-name";
     justify-content: space-between;
     margin-top: 25px;
+    */
+}
+.side-favourites-name {
+    margin-top: 5px;
 }
 .side-about-button {
+    display: flex;
+    justify-content: space-between;
+    /*
     display: grid;
     grid-template-areas: "about about-name";
     justify-content: space-between;
     margin-top: 25px;
+    */
+}
+.side-about-name {
+    margin-top: 5px;
 }
 
 .side-nav__container {

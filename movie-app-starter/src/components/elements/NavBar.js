@@ -48,17 +48,24 @@ const NavBar = (props) => {
                 onHideNav={() => setShowNav(false)}
                 title={title}
                 items={navItems}
-                navStyle={{ width: "50%" }}
                 titleStyle={{ 
                             backgroundColor: "#707793",
-                            height: "180px" 
+                            height: "180px",
                             }}
                 itemStyle={{ 
                             backgroundColor: '#1f2833',
-                            listStyleType: "none"
+                            listStyleType: "none",
+                            marginBottom: "10px", 
+                            marginTop: "-16px",
+                            marginLeft: "-40px",
+
+                            height: "80px"
                             }}
                 itemHoverStyle={{ backgroundColor: '#707793' }}
-                navStyle={{ backgroundColor: '#1f2833' }} />
+                navStyle={{ 
+                            backgroundColor: '#1f2833',
+                            width: "300px"
+                        }} />
         </div>
     );
 
