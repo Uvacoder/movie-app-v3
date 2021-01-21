@@ -35,6 +35,11 @@ const NavBar = (props) => {
 
     const title = <Link to={'/'}><img className="side-logo" src="/../images/database_logo_green.png" alt='Movie Database Logo' /></Link>;
 
+    const stylenav = {
+        padding: "30px"
+      };
+
+
     return (
         <div className="nav-bar-styling">
             <MenuIcon onClick={() => setShowNav(true)} />
@@ -44,6 +49,7 @@ const NavBar = (props) => {
                 onHideNav={() => setShowNav(false)}
                 title={title}
                 items={navItems}
+                navStyle={stylenav}
                 titleStyle={{ backgroundColor: '#707793' }}
                 itemStyle={{ backgroundColor: '#1f2833' }}
                 itemHoverStyle={{ backgroundColor: '#707793' }}
