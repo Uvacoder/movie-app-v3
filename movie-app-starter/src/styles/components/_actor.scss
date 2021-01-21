@@ -1,16 +1,16 @@
 /* Actor.js */
-.rmdb-actor {
+.actor {
   box-sizing: border-box;
 }
 
-.rmdb-actor img {
+.actor img {
   width: 40%;
   height: auto;
   float: left;
   box-sizing: border-box;
 }
 
-.rmdb-actor-name {
+.actor-name {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   color: #fff;
@@ -21,7 +21,7 @@
   text-transform: uppercase;
 }
 
-.rmdb-actor-character {
+.actor-character {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: #fff;
@@ -31,10 +31,10 @@
   box-sizing: border-box;
 }
 
-.rmdb-grid h1 {
+.movie-grid h1 {
   font-family: "Roboto", sans-serif;
   color: $green;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   margin: 5px 0px;
   padding: 0px 0px 25px 0px;

@@ -6,11 +6,10 @@ import MovieInfoBar from '../elements/MovieInfoBar';
 import SixColGrid from '../elements/SixColGrid';
 import Actor from '../elements/Actor';
 import Spinner from '../elements/Spinner';
-//import './Movie.css';
-//import '../../styles.scss';
 
-// has the computing and functions
-// imports the visual components (searchbar, etc)
+// single movie page
+// - has the computing and functions
+// - imports the visual components (searchbar, etc)
 
 class Movie extends Component {
     state = {
@@ -63,7 +62,7 @@ class Movie extends Component {
     }
     render() {
         return (
-            <div className="rmdb-movie">
+            <div className="movie">
                 {this.state.movie ?
                     <div>
                         <Navigation movie={this.props.location.movieName} />
@@ -72,7 +71,7 @@ class Movie extends Component {
                     </div>
                     : null}
                 {this.state.actors ?
-                    <div className="rmdb-movie-grid">
+                    <div className="movie-grid">
                         <SixColGrid header={'Actors'}>
                             {this.state.actors.map((element, i) => {
                                 return <Actor key={i} actor={element} />

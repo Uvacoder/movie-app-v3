@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-//import './MovieThumb.css';
-//import '../../styles.scss';
 
+// shows each movie on the homepage
 const MovieThumb = (props) => {
     return (
-        <div className="rmdb-moviethumb">
+        <div className="moviethumb">
             {props.clickable ?
                 <Link to={{ pathname: `/${props.movieId}`, movieName: `${props.movieName}` }}>
                     <img src={props.image} alt="moviethumb" />

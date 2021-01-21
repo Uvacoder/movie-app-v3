@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//import './Navigation.css';
-//import '../../styles.scss';
 
+// returns back to home
 const Navigation = (props) => {
   return (
-    <div className="rmdb-navigation">
-      <div className="rmdb-navigation-content">
+    <div className="main-navigation">
+      <div className="main-navigation-content">
         <Link to="/">
           <p>Home</p>
         </Link>

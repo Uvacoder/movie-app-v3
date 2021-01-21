@@ -1,5 +1,5 @@
 /* MovieInfo.js */
-.rmdb-movieinfo {
+.movieinfo {
   background-size: cover !important;
   background-position: center !important;
   width: 100%;
@@ -18,7 +18,7 @@
   }
 }
 
-.rmdb-movieinfo-content {
+.movieinfo-content {
   max-width: 1280px;
   width: 100%;
   height: 100%;
@@ -27,7 +27,7 @@
   position: relative;
 }
 
-.rmdb-movieinfo-text h1 {
+.movieinfo-text h1 {
   font-family: "Roboto", sans-serif;
   color: $green;
   font-weight: 700;
@@ -36,7 +36,7 @@
   margin: 5px 0px;
 }
 
-.rmdb-movieinfo-thumb {
+.movieinfo-thumb {
   width: 350px;
   height: 100%;
   overflow: hidden;
@@ -44,7 +44,7 @@
   left: 0px;
 }
 
-.rmdb-movieinfo-text {
+.movieinfo-text {
   font-family: "Roboto", sans-serif;
   height: 100%;
   width: auto;
@@ -56,62 +56,33 @@
   left: 360px;
 }
 
-.rmdb-movieinfo-text h1 {
+.movieinfo-text h1 {
   font-family: "Roboto", sans-serif;
   font-size: 48px;
   margin: 0;
 }
 
-.rmdb-movieinfo-text h3 {
+.movieinfo-text h3 {
   font-size: 16px;
   line-height: 0;
   margin-top: 30px;
 }
 
-.rmdb-movieinfo-text p {
+.movieinfo-text p {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 26px;
 }
 
-.rmdb-rating {
-  width: 250px;
-  height: 20px;
-  margin-top: 20px;
-  position: relative;
+.imdb-rating {
+  padding: 10px 5px;
+  margin: 20px 0px 20px 0px;
+  border: 2px solid $green;
+  width: 45px;
+  height: 45px;
+  text-align: center;
 }
 
-.rmdb-score {
-  position: absolute;
+.director {
   margin: 0;
-  right: 0px;
-  top: -3px;
-}
-
-.rmdb-director {
-  margin: 0;
-}
-
-.fa-film {
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  color: #fff;
-}
-
-meter::-webkit-meter-bar {
-  background: #fff;
-  width: 200px;
-}
-
-meter::-webkit-meter-optimum-value {
-  background: linear-gradient(to bottom, #3bba9c);
-}
-
-meter::-webkit-meter-suboptimum-value {
-  background: linear-gradient(to bottom, #fbb450);
-}
-
-meter::-webkit-meter-even-less-good-value {
-  background: linear-gradient(to bottom, #ee5f5b);
 }

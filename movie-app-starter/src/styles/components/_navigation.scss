@@ -1,5 +1,5 @@
 /* Navigation.js */
-.rmdb-navigation {
+.main-navigation {
   width: 100%;
   height: 50px;
   background: #121627;
@@ -11,18 +11,20 @@
   padding-top: 10px;
 }
 
-.rmdb-navigation-content {
+.main-navigation-content {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.rmdb-navigation-content p {
+.main-navigation-content p {
   font-family: "Roboto", sans-serif;
-  font-size: 22px;
+  font-size: 0.9em;
   float: left;
-  color: #3bba9c;
+  color: $green;
   padding-right: 10px;
+  text-transform: uppercase;
   text-decoration: none;
+  font-weight: 700;
   margin: 0;
 }

@@ -1,11 +1,16 @@
 /* Home.js */
-.rmdb-home {
-    margin-bottom: 100px;
-  }
-  
-  .rmdb-home-grid {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
+.home {
+  margin-bottom: 100px;
+}
+
+.home-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.grid h1 {
+  font-family: "Roboto", sans-serif;
+  color: #3bba9c;
+  padding-top: 20px;
+}

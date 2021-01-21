@@ -1,17 +1,18 @@
 // Footer
 import React from 'react';
-//import { Link } from 'react-router-dom';
-//import '../../styles.scss';
 
+// determine the current year
 const d = new Date();
 const year = d.getFullYear();
 
+// shows contact info, social media, and address
 const Footer = () => {
 
     return (
         <footer>
             <hr></hr>
             <div className="footer-grid">
+
                 <div className="contact">
                     <h3>Get in Touch</h3>
                 </div>
@@ -24,28 +25,16 @@ const Footer = () => {
                 <div className="social">
                     <h5>Social Media</h5>
                     <span className="surround">
-                        <span className="initial">
-                            <a href="www.instagram.com"><img src="/../images/instagram-icon.png" id="instagram-icon"></img></a>
-                        </span>
-                        <span className="onhover">
-                            <a href="www.instagram.com"><img src="/../images/darklilac-instagram-icon.png" id="darklilac-instagram-icon"></img></a>
-                        </span>
+                        <span className="initial"><a href="www.instagram.com"><img src="/../images/instagram-icon.png" id="instagram-icon"></img></a></span>
+                        <span className="onhover"><a href="www.instagram.com"><img src="/../images/darklilac-instagram-icon.png" id="darklilac-instagram-icon"></img></a> </span>
                     </span>
                     <span className="surround">
-                        <span className="initial">
-                            <a href="www.facebook.com"><img src="/../images/facebook-icon.png" id="facebook-icon"></img></a>
-                        </span>
-                        <span className="onhover">
-                            <a href="www.facebook.com"><img src="/../images/darklilac-facebook-icon.png" id="darklilac-facebook-icon"></img></a>
-                        </span>
+                        <span className="initial"><a href="www.facebook.com"><img src="/../images/facebook-icon.png" id="facebook-icon"></img></a></span>
+                        <span className="onhover"><a href="www.facebook.com"><img src="/../images/darklilac-facebook-icon.png" id="darklilac-facebook-icon"></img></a></span>
                     </span>
                     <span className="surround">
-                        <span className="initial">
-                            <a href="www.twitter.com"><img src="/../images/twitter-icon.png" id="twitter-icon"></img></a>
-                        </span>
-                        <span className="onhover">
-                            <a href="www.twitter.com"><img src="/../images/darklilac-twitter-icon.png" id="darklilac-twitter-icon"></img></a>
-                        </span>
+                        <span className="initial"><a href="www.twitter.com"><img src="/../images/twitter-icon.png" id="twitter-icon"></img></a></span>
+                        <span className="onhover"><a href="www.twitter.com"><img src="/../images/darklilac-twitter-icon.png" id="darklilac-twitter-icon"></img></a></span>
                     </span>
                 </div>
 

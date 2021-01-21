@@ -5,11 +5,10 @@ import SixColGrid from '../elements/SixColGrid';
 import MovieThumb from '../elements/MovieThumb';
 import LoadMoreBtn from '../elements/LoadMoreBtn';
 import Spinner from '../elements/Spinner';
-//import './Home.css';
-//import '../../styles.scss';
 
-// has the computing and functions
-// imports the visual components (searchbar, etc)
+// home page
+// - has the computing and functions
+// - imports the visual components (searchbar, etc)
 
 class Home extends Component {
     state = {
@@ -79,13 +78,13 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="rmdb-home">
+            <div className="home">
                 <div>
                     <SearchBar callback={this.searchItems} />
                 </div>
-                <div className="rmdb-home-grid">
+                <div className="home-grid">
                     <SixColGrid
-                        header={this.state.searchTerm ? 'Search Result' : 'Popular Movies'}
+                        header={this.state.searchTerm ? 'Search Result' : 'Popular'}
                         loading={this.state.loading}
                     >
                         {this.state.movies.map((element, i) => {

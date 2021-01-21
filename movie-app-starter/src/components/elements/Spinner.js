@@ -1,7 +1,6 @@
 import React from 'react';
-//import './Spinner.css';
-//import '../../styles.scss';
 
+// shows spinning animation when user clicks "load more"
 const Spinner = () => {
     return (
         <div className="loader"></div>

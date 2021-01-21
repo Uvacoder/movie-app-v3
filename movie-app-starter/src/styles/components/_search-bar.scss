@@ -1,51 +1,60 @@
 /* SearchBar.js */
-.rmdb-searchbar {
+.searchbar {
   width: 100%;
-  height: 105px;
+  height: 50px;
   background: #3c3f58;
   position: relative;
-  padding: 25px 20px 0px 20px;
+  padding: 0px 0px 0px 0px;
   box-sizing: border-box;
   color: #3bba9c;
 }
 
-.rmdb-searchbar-content {
+/* search bar styling */
+.searchbar-content {
   max-width: 1280px;
-  width: 100%;
-  height: 55px;
+  width: 50%;
+  height: 45px;
   background: #707793;
   margin: 0 auto;
-  border-radius: 40px;
   position: relative;
   color: #3bba9c;
+  border-bottom: 3px solid $green;
 }
 
-.rmdb-fa-search {
-  position: absolute;
-  left: 20px;
-  top: 12px;
-  color: #3bba9c;
+/* search icon */
+.searchbar-content img {
+  width: 50px;
 }
 
-.rmdb-searchbar-input {
+/* input bar */
+.searchbar-input {
   font-family: "Roboto", sans-serif;
-  font-size: 38px;
+  font-size: 1.2em;
   position: absolute;
-  left: 70px;
-  top: 7px;
+  left: 50px;
+  top: 2px;
   border: 0;
   background: transparent;
   height: 40px;
   color: #fff;
 }
 
-.rmdb-searchbar-input:focus {
+/* "Search" placeholder text */
+.searchbar-input::placeholder {
+  color: $green;
+  font-size: 1.2em;
+}
+
+.searchbar-input:focus {
   outline: none;
 }
 
 @media screen and (max-width: 720px) {
-  .rmdb-searchbar-input {
-    font-size: 28px;
+  .searchbar-content {
+    width: 80%;
+  }
+  .searchbar-input {
+    font-size: 1em;
     color: #fff;
   }
 }

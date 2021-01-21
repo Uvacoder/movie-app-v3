@@ -1,20 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../elements/NavBar';
-//import './Header.css';
-//import '../../styles.scss';
 
+// shows the header on each page
 const Header = () => {
   return (
-    <div className="rmdb-header">
-      <div className="rmdb-header-content">
-        <Link to="/"><img className="rmdb-logo" src="/../images/database_logo_green.png" alt="react-logo" /></Link>
+    <div className="movie-site-header">
+      <div className="movie-site-header-content">
+        <Link to="/"><img className="movie-site-logo" src="/../images/database_logo_green.png" alt="movie-site-logo" /></Link>
         <NavBar />
       </div>
-      
+
     </div>
   )
-
 }
 
 export default Header;

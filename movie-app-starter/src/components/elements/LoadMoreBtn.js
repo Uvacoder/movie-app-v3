@@ -1,10 +1,9 @@
 import React from 'react';
-//import './LoadMoreBtn.css';
-//import '../../styles.scss';
 
+// shows the "load more" button for users to view more movies
 const LoadMoreBtn = (props) => {
   return (
-    <div className="rmdb-loadmorebtn" onClick={props.onClick}>
+    <div className="loadmorebtn" onClick={props.onClick}>
       <p>{props.text}</p>
     </div>
   )

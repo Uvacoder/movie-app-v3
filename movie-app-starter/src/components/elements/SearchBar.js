@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import FontAwesome from 'react-fontawesome';
-//import './SearchBar.css';
-//import '../../styles.scss';
 
-// create a class
+// shows the search bar below the header
+
 class SearchBar extends Component {
     state = {
         value: ''
@@ -22,12 +20,12 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div className="rmdb-searchbar">
-                <div className="rmdb-searchbar-content">
-                    <FontAwesome className="rmdb-fa-search" name="search" size="2x" />
+            <div className="searchbar">
+                <div className="searchbar-content">
+                    <img src="/../../images/search_icon.png"></img>
                     <input
                         type="text"
-                        className="rmdb-searchbar-input"
+                        className="searchbar-input"
                         placeholder="Search"
                         onChange={this.doSearch}
                         value={this.state.value}

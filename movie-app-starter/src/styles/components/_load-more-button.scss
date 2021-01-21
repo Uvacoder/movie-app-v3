@@ -1,5 +1,5 @@
 /* LoadMoreBtn.js */
-.rmdb-loadmorebtn {
+.loadmorebtn {
   background: #3bba9c;
   width: 100%;
   min-height: 50px;
@@ -9,12 +9,12 @@
   transition: all 0.3s;
 }
 
-.rmdb-loadmorebtn p {
+.loadmorebtn p {
   font-family: "Roboto", sans-serif;
   font-size: 42px;
   padding: 20px;
 }
 
-.rmdb-loadmorebtn:hover {
+.loadmorebtn:hover {
   opacity: 0.8;
 }

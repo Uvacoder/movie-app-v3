@@ -3,16 +3,12 @@
 
 const API_URL = 'https://api.themoviedb.org/3/';
 const API_KEY = '19944e5a16d594596406f317a9fcd6c6';
-//const API_KEY = '844dba0bfd8f3a4f3799f6130ef9e335';
-
-// our API key: 19944e5a16d594596406f317a9fcd6c6
-
 
 // Images
 // An image URL looks like this example:
 // http://image.tmdb.org/t/p/w780/bOGkgRGdhrBYJSLpXaxhXVstddV.jpg
 
-const IMAGE_BASE_URL ='http://image.tmdb.org/t/p/';
+const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/';
 
 //Sizes: w300, w780, w1280, original
 const BACKDROP_SIZE = 'w1280';

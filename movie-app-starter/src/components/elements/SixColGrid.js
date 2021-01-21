@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import './SixColGrid.css';
-//import '../../styles.scss';
+
+// create a six column grid (desktop) of movies on the homepage
 
 // create a functional component that will recieve props
-// and that will return a div with the four col grid
+// and that will return a div with the six col grid
 const SixColGrid = (props) => {
 
   const renderElements = () => {
     const gridElements = props.children.map((element, i) => {
       return (
-        <div key={i} className="rmdb-grid-element">
+        <div key={i} className="grid-element">
           {element}
         </div>
       )
@@ -19,9 +19,9 @@ const SixColGrid = (props) => {
   }
 
   return (
-    <div className="rmdb-grid">
+    <div className="grid">
       {props.header && !props.loading ? <h1>{props.header}</h1> : null}
-      <div className="rmdb-grid-content">
+      <div className="grid-content">
         {renderElements()}
       </div>
     </div>
