@@ -35,11 +35,11 @@ const NavBar = (props) => {
 
     const title = <Link to={'/'}><img className="side-logo" src="/../images/database_logo_green.png" alt='Movie Database Logo' /></Link>;
 
-
     return (
         <div className="nav-bar-styling">
             <MenuIcon onClick={() => setShowNav(true)} />
             <SideNav
+                openFromRight={true}
                 showNav={showNav}
                 onHideNav={() => setShowNav(false)}
                 title={title}
