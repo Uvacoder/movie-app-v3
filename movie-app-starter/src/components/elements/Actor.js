@@ -1,6 +1,9 @@
 import React from 'react';
 import { IMAGE_BASE_URL } from '../../config';
 
+// note: maybe add a load more button for actors?
+// also: must add a "not found" image for actor
+
 // shows a list of all actors and their roles who participated in the movie
 const Actor = (props) => {
 

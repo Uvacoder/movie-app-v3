@@ -6,6 +6,7 @@ import MovieThumb from '../elements/MovieThumb';
 import LoadMoreBtn from '../elements/LoadMoreBtn';
 import Spinner from '../elements/Spinner';
 
+// note: add a "not found" image when movie posters don't show up
 
 // home page
 // - has the computing and functions
