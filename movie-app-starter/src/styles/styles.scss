@@ -6,20 +6,20 @@
 <link rel="stylesheet" href="https://use.typekit.net/jbp8oya.css">
 */
 
-/*
+
 // Functions
-@import './utilities/functions.scss';
-*/
+//@import './utilities/functions.scss';
+
 
 // Settings
-//@import "./base/settings";
+@import "./base/settings";
 
 // Utilities
 //@import "./utilities/mixins.scss";
 
 // Resets
-//@import "./base/reset";
-//@at-root "./base/type";
+@import "./base/reset";
+@import './base/type';
 
 // Components 
 @import "./components/actor";
@@ -33,7 +33,7 @@
 @import "./components/movie-thumb";
 @import "./components/movie";
 @import "./components/navigation";
-//@import "./components/not-found";
+@import "./components/nav-bar";
 @import "./components/search-bar";
 @import "./components/six-col-grid";
 @import "./components/spinner";

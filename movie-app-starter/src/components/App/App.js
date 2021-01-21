@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from '../elements/Header';
 import Footer from '../elements/Footer';
-import NavBar from '../elements/NavBar';
 import Home from '../Home/Home';
 import Movie from '../Movie/Movie';
 import NotFound from '../elements/NotFound';
@@ -15,7 +14,6 @@ const App = () => {
     <BrowserRouter basename="/ReactMovieDB">
       <React.Fragment>
         <Header />
-        <NavBar />
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/:movieId" component={Movie} exact />
