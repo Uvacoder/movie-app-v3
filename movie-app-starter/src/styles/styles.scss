@@ -1,0 +1,58 @@
+// Imports
+// Google Fonts - Import
+//@import url('https://fonts.googleapis.com/css?family=Alatsi|Roboto:400,400i,700,700i&display=swap');
+@import url("https://use.typekit.net/jbp8oya.css");
+/*
+<link rel="stylesheet" href="https://use.typekit.net/jbp8oya.css">
+*/
+
+/*
+// Functions
+@import './utilities/functions.scss';
+*/
+
+// Settings
+//@import "./base/settings";
+
+// Utilities
+//@import "./utilities/mixins.scss";
+
+// Resets
+//@import "./base/reset";
+//@at-root "./base/type";
+
+// Components 
+@import "./components/actor";
+@import "./components/footer";
+@import "./components/_header.scss";
+@import "./components/home";
+@import "./components/index";
+@import "./components/load-more-button";
+@import "./components/movie-info-bar";
+@import "./components/movie-info";
+@import "./components/movie-thumb";
+@import "./components/movie";
+@import "./components/navigation";
+//@import "./components/not-found";
+@import "./components/search-bar";
+@import "./components/six-col-grid";
+@import "./components/spinner";
+
+
+
+
+/*
+// Components (v1)
+@import "./components/body";
+@import "./components/wrapper";
+@import "./components/header";
+@import "./components/nav";
+@import "./components/btn-main-nav";
+@import "./components/main";
+@import "./components/favourites";
+@import "./components/about";
+@import "./components/single-movie";
+@import "./components/footer";
+*/
+
+// Widgets
