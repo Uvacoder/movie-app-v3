@@ -19,7 +19,7 @@ const MovieThumb = (props) => {
                         <img src={props.image} alt="moviethumb" />
                         <div className="moviethumb-details">
                             <div className="moviethumb-title">{props.movieName}</div>
-                            <div className="moviethumb-genre">{props.movieGenre}</div>
+                            <div className="moviethumb-overview">{props.movieOverview}</div>
                             <div className="moviethumb-release">[{props.movieRelease}]</div>
                         </div>
                         <div className="moviethumb-moreinfo-rating">
