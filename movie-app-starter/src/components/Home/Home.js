@@ -113,6 +113,8 @@ class Home extends Component {
                                 movieId={element.id}
                                 movieName={element.original_title}
                                 movieRating={element.vote_average}
+                                movieRelease={element.release_date}
+                                movieOverview={element.overview}
                             />
                         })}
                     </SixColGrid>
