@@ -15,7 +15,7 @@ const SixColGrid = (props) => {
       return (
         // looping thru children  
         <div key={i} className="grid-element">
-          //
+          
           {element}
         </div>
       )

@@ -158,7 +158,7 @@ class Home extends Component {
                     
                     {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ?
                     // CHECKS TO SEE IF THE CURRENT PAGE IS LOADING OR NOT. allows for click to load more items.
-                    // Above^^ is a ternary which places the spinner inside
+                    // Above^^ is a ternary which places the spinner
                         <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} />
                         : null}
 
