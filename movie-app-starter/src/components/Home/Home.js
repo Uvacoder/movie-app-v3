@@ -103,6 +103,7 @@ class Home extends Component {
         return (
             <div className="home">
                 <div>
+                    
                     <SearchBar callback={this.searchItems} />
                 </div>
 
@@ -125,17 +126,24 @@ class Home extends Component {
                         </Link>
                     </div>
                 </div>
-
+                
                 <div className="home-grid">
                     <SixColGrid
+                        // creates the header to show the title of Form and or the title of the searcg result.
                         header={this.state.searchTerm ? 'Search Result' : 'Popular'}
+                        // prop with loading state
                         loading={this.state.loading}
                     >
+                        
                         {this.state.movies.map((element, i) => {
+                            // returns the movie thumb with it's props
                             return <MovieThumb
                                 key={i}
+                                // allows user to click on thumbnail
                                 clickable={true}
+                                //checks the image poster path. TERNARY, if there are no image, go to fall back image (no image.png)
                                 image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
+                                // start of using the link
                                 movieId={element.id}
                                 movieName={element.original_title}
                                 movieRating={element.vote_average}
@@ -145,8 +153,12 @@ class Home extends Component {
                             />
                         })}
                     </SixColGrid>
+                
                     {this.state.loading ? <Spinner /> : null}
+                    
                     {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ?
+                    // CHECKS TO SEE IF THE CURRENT PAGE IS LOADING OR NOT. allows for click to load more items.
+                    // Above^^ is a ternary which places the spinner inside
                         <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} />
                         : null}
 
