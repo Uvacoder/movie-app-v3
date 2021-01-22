@@ -1,9 +1,9 @@
-/* Upcoming.js */
-.upcoming {
+/* NowPlaying.js */
+.top-rated {
     margin-bottom: 100px;
   }
   
-  .upcoming-grid {
+  .top-rated-grid {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
@@ -31,7 +31,7 @@
     border-left: 2.5px solid $green; 
   }
   
-  .form-top-rated p {
+  .form-upcoming p {
     color: $green;
     font-family: $boldFont;
     font-size: 1.1em;

@@ -5,6 +5,7 @@ import SixColGrid from '../elements/SixColGrid';
 import MovieThumb from '../elements/MovieThumb';
 import LoadMoreBtn from '../elements/LoadMoreBtn';
 import Spinner from '../elements/Spinner';
+import { Link } from 'react-router-dom';
 
 // note: add a "not found" image when movie posters don't show up
 
@@ -103,15 +104,21 @@ class NowPlaying extends Component {
 
                 <div className="header-form-select">
                     <div className="form-top-rated">
-                        <a href="#">Top Rated</a>
+                        <Link to="././TopRated">
+                            <p>Top Rated</p>
+                        </Link>
                     </div>
                     <div className="vertical-form"></div>
                     <div className="form-upcoming">
-                        <a href="#">Upcoming</a>
+                        <Link to="././Upcoming">
+                            <p>Upcoming</p>
+                        </Link>
                     </div>
                     <div className="vertical-form"></div>
                     <div className="form-popular">
-                        <a href="#">Popular</a>
+                        <Link to="././Home">
+                            <p>Popular</p>
+                        </Link>
                     </div>
 			    </div>
 

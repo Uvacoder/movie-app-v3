@@ -31,9 +31,20 @@
   border-left: 2.5px solid $green; 
 }
 
-.form-top-rated,
-.form-upcoming,
-.form-now-playing a {
+.form-top-rated p {
+  color: $green;
+  font-family: $boldFont;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.form-upcoming p {
+  color: $green;
+  font-family: $boldFont;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.form-now-playing p {
+  color: $green;
   font-family: $boldFont;
   font-size: 1.1em;
   font-weight: 600;
