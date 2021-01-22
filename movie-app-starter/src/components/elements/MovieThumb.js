@@ -15,7 +15,10 @@ const MovieThumb = (props) => {
         <div className="moviethumb">
             <div className="movie">
                 {props.clickable ?
+                // ^ asks if clickable/ then links to pathname that will show up into URL
+                // POSSIBLY CHANGE THIS TO LINK THE THUMBNAIL CLICK TO A NEW PAGE!!!
                     <Link to={{ pathname: `/${props.movieId}`, movieName: `${props.movieName}` }}>
+                    
                         <img src={props.image} alt="Movie Poster" />
                         <div className="moviethumb-details">
                             <div className="moviethumb-title">{props.movieName}</div>
