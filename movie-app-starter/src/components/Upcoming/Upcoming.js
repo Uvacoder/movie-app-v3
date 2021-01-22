@@ -103,15 +103,21 @@ class Upcoming extends Component {
 
                 <div className="header-form-select">
                     <div className="form-popular">
-                        <a href="#">Popular</a>
+                        <Link to="././Home">
+                            <p>Popular</p>
+                        </Link>
                     </div>
                     <div className="vertical-form"></div>
                     <div className="form-top-rated">
-                        <a href="#">Top Rated</a>
+                        <Link to="././TopRated">
+                            <p>Top Rated</p>
+                        </Link>
                     </div>
                     <div className="vertical-form"></div>
                     <div className="form-now-playing">
-                        <a href="#">Now Playing</a>
+                        <Link to="././NowPlaying">
+                            <p>Now Playing</p>
+                        </Link>
                     </div>
 			    </div>
 

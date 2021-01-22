@@ -102,16 +102,22 @@ class TopRated extends Component {
                 </div>
 
                 <div className="header-form-select">
-                <div className="form-now-playing">
-                        <a href="#">Now Playing</a>
+                    <div className="form-now-playing">
+                        <Link to="././NowPlaying">
+                            <p>Now Playing</p>
+                        </Link>
                     </div>
                     <div className="vertical-form"></div>
                     <div className="form-upcoming">
-                        <a href="#">Upcoming</a>
+                        <Link to="././Upcoming">
+                            <p>Upcoming</p>
+                        </Link>
                     </div>
                     <div className="vertical-form"></div>
                     <div className="form-popular">
-                        <a href="#">Popular</a>
+                        <Link to="././Home">
+                            <p>Popular</p>
+                        </Link>
                     </div>
 			    </div>
 
