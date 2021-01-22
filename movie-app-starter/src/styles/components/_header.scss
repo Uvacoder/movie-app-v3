@@ -37,8 +37,8 @@
   fill: $green;
 }
 
-
-@media screen and (max-width: 500px) {
+//@media screen and (max-width: 500px) {
+@media screen and (max-width: $tablet) {
   .movie-site-header-content {
     max-width: 1280px;
     min-height: 0px;

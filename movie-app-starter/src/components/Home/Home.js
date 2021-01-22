@@ -110,7 +110,7 @@ class Home extends Component {
                                 movieName={element.original_title}
                                 movieRating={element.vote_average}
                                 movieRelease={element.release_date}
-                                movieGenre={element.genres_movie_list}
+                                movieOverview={element.overview}
                             />
                         })}
                     </SixColGrid>

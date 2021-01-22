@@ -8,7 +8,7 @@
 }
 
 .grid-element {
-  background: $darkIndigo;
+  background: none;
   max-height: 430px;
   animation: animateGrid 0.5s;
   overflow: hidden;
@@ -23,9 +23,31 @@
   }
 }
 
-@media screen and (max-width: 720px) {
+//@media screen and (max-width: 720px) {
+@media screen and (max-width: 480px) {
   .grid-content {
     grid-template-columns: auto auto;
+  }
+  .grid-element:nth-child(2n + 2) {
+    margin-right: 0;
+  }
+  .grid h1 {
+    font-size: 22px;
+  }
+  .grid-element {
+    max-height: 27em;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 719px) {
+  .grid-content {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (min-width: 719px) and (max-width: 960px) {
+  .grid-content {
+    grid-template-columns: auto auto auto auto;
   }
   .grid-element:nth-child(2n + 2) {
     margin-right: 0;
