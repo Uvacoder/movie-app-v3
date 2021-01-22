@@ -25,34 +25,44 @@ class Movie extends Component {
         loading: false
     }
 
+    // lifecyle method 
     componentDidMount() {
         if (localStorage.getItem(`${this.props.match.params.movieId}`)) {
             const state = JSON.parse(localStorage.getItem(`${this.props.match.params.movieId}`));
             this.setState({ ...state });
         } else {
+            //
             this.setState({ loading: true })
             // First fetch the movie...
+
             const endpoint = `${API_URL}movie/${this.props.match.params.movieId}?api_key=${API_KEY}&language=en-US`;
             this.fetchItems(endpoint);
         }
     }
-
+    
     fetchItems = (endpoint) => {
         fetch(endpoint)
+            // get results from^ fetch endpoint, so convert results using json
             .then(result => result.json())
             .then(result => {
-                //  console.log
+                //  
                 if (result.status_code) {
                     this.setState({ loading: false });
                 } else {
+                    // fill the movie state WITH the reuslt FOR the movie
                     this.setState({ movie: result }, () => {
                         // ... then fetch actors in the setState callback function
                         const endpoint = `${API_URL}movie/${this.props.match.params.movieId}/credits?api_key=${API_KEY}`;
+                        // ^ new endpoint
                         fetch(endpoint)
                             .then(result => result.json())
                             .then(result => {
+                                // used to fetch the directors 
+                                // the above code already found the results, 
+                                // now we much FILTER to get only the director data info (crew/jobs are predefined properties formt he API)
                                 const directors = result.crew.filter((member) => member.job === "Director");
-
+                                
+                                // set the state again!
                                 this.setState({
                                     actors: result.cast,
                                     directors,
@@ -64,6 +74,7 @@ class Movie extends Component {
                     })
                 }
             })
+            // catches to see if any errors present.
             .catch(error => console.error('Error:', error))
     }
     render() {
