@@ -42,8 +42,11 @@ class Home extends Component {
     searchItems = (searchTerm) => {
         let endpoint = '';
         this.setState({
+            // clear movies and only show what is searched
             movies: [],
+            // show loading screen on bottom
             loading: true,
+            // sets the searchterm INTO the state
             searchTerm
         })
 
