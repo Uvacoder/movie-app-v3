@@ -25,7 +25,10 @@ class Home extends Component {
 
     // check if component has mounted
     componentDidMount() {
+        // check if local state is in storage befor ebeing retrived 
         if (localStorage.getItem('HomeState')) {
+            // retrieve data from local storage
+            // below will take the string from the local storage to convert back to a state object
             const state = JSON.parse(localStorage.getItem('HomeState'));
             this.setState({ ...state });
         } else {
@@ -92,6 +95,7 @@ class Home extends Component {
                     totalPages: result.total_pages
                 }, () => {
                     if (this.state.searchTerm === "") {
+                        // stores data in local storage whenever something is retreived 
                         localStorage.setItem('HomeState', JSON.stringify(this.state));
                     }
                 })
