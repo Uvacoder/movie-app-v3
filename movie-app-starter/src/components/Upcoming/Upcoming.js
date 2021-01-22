@@ -100,6 +100,21 @@ class Upcoming extends Component {
                 <div>
                     <SearchBar callback={this.searchItems} />
                 </div>
+
+                <div className="header-form-select">
+                    <div className="form-popular">
+                        <a href="#">Popular</a>
+                    </div>
+                    <div className="vertical-form"></div>
+                    <div className="form-top-rated">
+                        <a href="#">Top Rated</a>
+                    </div>
+                    <div className="vertical-form"></div>
+                    <div className="form-now-playing">
+                        <a href="#">Now Playing</a>
+                    </div>
+			    </div>
+
                 <div className="upcoming-grid">
                     <SixColGrid
                         header={this.state.searchTerm ? 'Search Result' : 'Upcoming'}

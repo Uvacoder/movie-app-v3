@@ -12,7 +12,7 @@ import Spinner from '../elements/Spinner';
 // - has the computing and functions
 // - imports the visual components (searchbar, etc)
 
-class Home extends Component {
+class NowPlaying extends Component {
     state = {
         movies: [],
         loading: false,
@@ -30,7 +30,7 @@ class Home extends Component {
             this.setState({ loading: true });
             // Specify API URL (Start by calling the popular movies first)
             // URL first, then API key
-            const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+            const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`;
             // send endpoint to the method
             this.fetchItems(endpoint);
         }
@@ -48,7 +48,7 @@ class Home extends Component {
         // check to see if theres anything in the search term
         if (searchTerm === '') {
             // if not, populate the the movie with popular movies
-            endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+            endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`;
         } else {
             // if so, show the searched movies
             endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}`;
@@ -64,7 +64,7 @@ class Home extends Component {
 
         if (this.state.searchTerm === '') {
             // will load more popular movies (on home page)
-            endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`;
+            endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`;
         } else {
             // will load more movies on the searched page
             endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`;
@@ -96,7 +96,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="home">
+            <div className="now-playing">
                 <div>
                     <SearchBar callback={this.searchItems} />
                 </div>
@@ -110,14 +110,14 @@ class Home extends Component {
                         <a href="#">Upcoming</a>
                     </div>
                     <div className="vertical-form"></div>
-                    <div className="form-now-playing">
-                        <a href="#">Now Playing</a>
+                    <div className="form-popular">
+                        <a href="#">Popular</a>
                     </div>
 			    </div>
 
-                <div className="home-grid">
+                <div className="now-playing-grid">
                     <SixColGrid
-                        header={this.state.searchTerm ? 'Search Result' : 'Popular'}
+                        header={this.state.searchTerm ? 'Search Result' : 'Now Playing'}
                         loading={this.state.loading}
                     >
                         {this.state.movies.map((element, i) => {
@@ -128,8 +128,6 @@ class Home extends Component {
                                 movieId={element.id}
                                 movieName={element.original_title}
                                 movieRating={element.vote_average}
-                                movieRelease={element.release_date}
-                                movieGenre={element.genres_movie_list}
                             />
                         })}
                     </SixColGrid>
@@ -144,4 +142,5 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default NowPlaying;
+
