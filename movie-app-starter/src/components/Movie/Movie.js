@@ -58,9 +58,11 @@ class Movie extends Component {
                             .then(result => result.json())
                             .then(result => {
                                 // used to fetch the directors 
-                                // the above code already found the results, now we much FILTER to get only the director data info
+                                // the above code already found the results, 
+                                // now we much FILTER to get only the director data info (crew/jobs are predefined properties formt he API)
                                 const directors = result.crew.filter((member) => member.job === "Director");
-
+                                
+                                // set the state again!
                                 this.setState({
                                     actors: result.cast,
                                     directors,
@@ -72,6 +74,7 @@ class Movie extends Component {
                     })
                 }
             })
+            // catches to see if any errors present.
             .catch(error => console.error('Error:', error))
     }
     render() {
