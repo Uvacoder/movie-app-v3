@@ -1,4 +1,8 @@
 /* MovieInfo.js */
+.moviethumb-details {
+  width: auto;
+  height: 50px;
+}
 .movieinfo {
   background-size: cover !important;
   background-position: center !important;
@@ -10,13 +14,68 @@
 }
 
 .moviethumb-title {
-  color: white;
+  color: $bodyFont;
   margin: 5px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap; /* Don't forget this one */
+  text-overflow: ellipsis;
+}
+
+.moviethumb-title:hover {
+  overflow: visible;
+  white-space: normal;
 }
 
 .moviethumb-rating {
-  color: white;
+  padding: 10px 5px;
+  margin: 20px 5px 20px 5px;
+  color: $green;
+  border: 2px solid $green;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  align-self: flex-end;
+}
+
+.moviethumb-release,
+.moviethumb-genre {
+  color: $bodyFont;
   margin: 5px;
+}
+.moviethumb-moreinfo {
+  text-align: left;
+  align-self: center;
+}
+
+.moviethumb-moreinfo button {
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 0 auto;
+}
+
+.moviethumb-moreinfo p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  padding: 0px 5px;
+  color: $green;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* decreased opacity on hover */
+.moviethumb-moreinfo button:hover {
+  opacity: 0.8;
+}
+
+.moviethumb-moreinfo-rating {
+  display: flex;
+  justify-content: space-between;
 }
 
 @keyframes animateMovieinfo {

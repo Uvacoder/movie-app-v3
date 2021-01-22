@@ -8,14 +8,10 @@
 }
 
 .grid-element {
-  background: $green;
+  background: $darkIndigo;
   max-height: 430px;
   animation: animateGrid 0.5s;
   overflow: hidden;
-}
-.grid-element:hover {
-  /* decreased opacity on hover */
-  opacity: 0.8;
 }
 
 @keyframes animateGrid {
