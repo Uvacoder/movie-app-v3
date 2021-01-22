@@ -15,3 +15,26 @@
   padding-top: 20px;
   text-transform: uppercase;
 }
+
+// Styling for the different movie forms
+.header-form-select {
+  display: flex;
+  justify-content: space-evenly;
+  margin:auto;
+  margin-top: 30px;
+  padding-left: 200px;
+  padding-right: 200px;
+  text-transform: uppercase;
+}
+
+.vertical-form {
+  border-left: 2.5px solid $green; 
+}
+
+.form-top-rated,
+.form-upcoming,
+.form-now-playing a {
+  font-family: $boldFont;
+  font-size: 1.1em;
+  font-weight: 600;
+}
