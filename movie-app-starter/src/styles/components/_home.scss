@@ -20,7 +20,7 @@
 .header-form-select {
   display: flex;
   justify-content: space-evenly;
-  margin:auto;
+  margin: auto;
   margin-top: 30px;
   padding-left: 200px;
   padding-right: 200px;
@@ -28,7 +28,43 @@
 }
 
 .vertical-form {
-  border-left: 2.5px solid $green; 
+  border-left: 2.5px solid $green;
+}
+
+@media screen and (max-width: $tablet) {
+  .header-form-select {
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    div p {
+      font-size: 0.8em;
+      margin: 5px 5px;
+    }
+    .form-top-rated p,
+    .form-upcoming p,
+    .form-now-playing p {
+      border: 2px solid $green;
+      border-radius: 25px;
+      padding: 0px 10px;
+    }
+    .vertical-form {
+      border-left: none;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $desktop) {
+  .header-form-select {
+    padding-left: 25px;
+    padding-right: 25px;
+    div p {
+      font-size: 0.9em;
+    }
+    .vertical-form {
+      border-left: 1px solid $green;
+    }
+  }
 }
 
 .form-top-rated p {

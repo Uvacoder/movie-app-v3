@@ -103,7 +103,7 @@ class Home extends Component {
         return (
             <div className="home">
                 <div>
-                    
+
                     <SearchBar callback={this.searchItems} />
                 </div>
 
@@ -126,7 +126,7 @@ class Home extends Component {
                         </Link>
                     </div>
                 </div>
-                
+
                 <div className="home-grid">
                     <SixColGrid
                         // creates the header to show the title of Form and or the title of the searcg result.
@@ -134,7 +134,7 @@ class Home extends Component {
                         // prop with loading state
                         loading={this.state.loading}
                     >
-                        
+
                         {this.state.movies.map((element, i) => {
                             // returns the movie thumb with it's props
                             return <MovieThumb
@@ -153,12 +153,12 @@ class Home extends Component {
                             />
                         })}
                     </SixColGrid>
-                
+
                     {this.state.loading ? <Spinner /> : null}
-                    
+
                     {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ?
-                    // CHECKS TO SEE IF THE CURRENT PAGE IS LOADING OR NOT. allows for click to load more items.
-                    // Above^^ is a ternary which places the spinner
+                        // CHECKS TO SEE IF THE CURRENT PAGE IS LOADING OR NOT. allows for click to load more items.
+                        // Above^^ is a ternary which places the spinner
                         <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} />
                         : null}
 

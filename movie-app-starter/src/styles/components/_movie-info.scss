@@ -58,7 +58,7 @@
 
 .movieinfo-text h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 48px;
+  font-size: 36px;
   margin: 0;
 }
 
@@ -88,6 +88,58 @@
   margin: 0;
 }
 
-@media screen and (max-width: 900px) {
-  
+@media screen and (max-width: $tablet) {
+  .movieinfo-content {
+    .movieinfo-thumb {
+      display: none;
+    }
+    .movieinfo-text {
+      left: 0px;
+      h1 {
+        font-size: 1.2em;
+      }
+      h3 {
+        font-size: 1.1em;
+      }
+      p {
+        font-size: 1em;
+        line-height: 1.4;
+      }
+      .imdb-rating {
+        font-size: 0.9em;
+        padding: 7px 5px;
+        margin: 20px 0px 20px 0px;
+        border: 2px solid $green;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $desktop) {
+  .movieinfo-content {
+    .movieinfo-text {
+      h1 {
+        font-size: 1.5em;
+      }
+      h3 {
+        font-size: 1.3em;
+      }
+      p {
+        font-size: 1.1em;
+        line-height: 1.4;
+      }
+      .imdb-rating {
+        font-size: 0.9em;
+        padding: 7px 5px;
+        margin: 20px 0px 20px 0px;
+        border: 2px solid $green;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+      }
+    }
+  }
 }

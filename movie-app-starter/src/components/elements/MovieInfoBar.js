@@ -8,12 +8,10 @@ const MovieInfoBar = (props) => {
             <div className="movieinfobar-content">
 
                 <div className="movieinfobar-content-col">
-                    <span className="movieinfobar-info">Runtime: {calcTime(props.time)}</span>
-                    <span className="movieinfobar-info">Budget: {convertMoney(props.budget)}</span>
-                    <span className="movieinfobar-info">Revenue: {convertMoney(props.revenue)}</span>
+                    <span className="movieinfobar-info"><b>Runtime:</b> {calcTime(props.time)}</span>
+                    <span className="movieinfobar-info"><b>Budget:</b> {convertMoney(props.budget)}</span>
+                    <span className="movieinfobar-info"><b>Revenue:</b> {convertMoney(props.revenue)}</span>
                 </div>
-
-                <div className="movieinfobar-content-col"></div>
 
                 <div className="movieinfobar-content-col">
                     <div className="fave">

@@ -125,6 +125,18 @@
   background: rgb(18, 22, 39, 0.95);
   position: relative;
 }
+@media screen and (max-width: $tablet) {
+  .movieinfo-content {
+    background: rgb(18, 22, 39, 0.7);
+  }
+  .movieinfo-text h1,
+  .movieinfo-text h3 {
+    color: $lighterHeaderNav;
+  }
+  .movieinfo-text p {
+    color: $lightBodyFont;
+  }
+}
 
 .movieinfo-thumb {
   width: 350px;
