@@ -7,10 +7,10 @@ const Header = () => {
   return (
     <div className="movie-site-header">
       <div className="movie-site-header-content">
-        <Link to="/"><img className="movie-site-logo" src="/../images/database_logo_green.png" alt="movie-site-logo" /></Link>
-          <div className="nav-bar-styling">
-            <NavBar />
-          </div>
+        <Link to="/"><img className="movie-site-logo" src="/../images/database_logo_green.png" alt="React Movie Logo" /></Link>
+        <div className="nav-bar-styling">
+          <NavBar />
+        </div>
       </div>
 
     </div>

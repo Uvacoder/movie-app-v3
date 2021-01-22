@@ -17,7 +17,7 @@ const MovieInfoBar = (props) => {
 
                 <div className="movieinfobar-content-col">
                     <div className="fave">
-                        <span className="movieinfobar-info">Add / Remove to Favourites <img src="/../../images/favourite_icon.png"></img></span>
+                        <span className="movieinfobar-info">Add / Remove to Favourites <img src="/../../images/favourite_icon.png" alt="Favourite Icon"></img></span>
                     </div>
                 </div>
 

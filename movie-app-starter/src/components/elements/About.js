@@ -16,7 +16,7 @@ const About = () => (
         interest you, go ahead and add them to your Favorites.</p>
 
     <div class="tmdb-logo">
-      <a href="https://www.themoviedb.org/documentation/api"><img src="/../assets/images/tmdb-logo.png" className="no-hover"></img></a>
+      <a href="https://www.themoviedb.org/documentation/api"><img src="/../assets/images/tmdb-logo.png" alt="TMDB Logo" className="no-hover"></img></a>
     </div>
     <p>This product uses the <a href="https://www.themoviedb.org/documentation/api">TMDb API</a> but is not endorsed or certified by TMDb. For educational purposes only.</p>
 

@@ -16,7 +16,7 @@ const MovieThumb = (props) => {
             <div className="movie">
                 {props.clickable ?
                     <Link to={{ pathname: `/${props.movieId}`, movieName: `${props.movieName}` }}>
-                        <img src={props.image} alt="moviethumb" />
+                        <img src={props.image} alt="Movie Poster" />
                         <div className="moviethumb-details">
                             <div className="moviethumb-title">{props.movieName}</div>
                             <div className="moviethumb-overview">{props.movieOverview}</div>
@@ -28,7 +28,7 @@ const MovieThumb = (props) => {
                         </div>
                     </Link>
                     :
-                    <img src={props.image} alt="moviethumb" />
+                    <img src={props.image} alt="Movie Poster" />
                 }
             </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config';
+//import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config';
+import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from '../../config';
 import SearchBar from '../elements/SearchBar';
 import SixColGrid from '../elements/SixColGrid';
 import MovieThumb from '../elements/MovieThumb';
@@ -120,7 +121,7 @@ class Home extends Component {
                             <p>Now Playing</p>
                         </Link>
                     </div>
-			    </div>
+                </div>
 
                 <div className="home-grid">
                     <SixColGrid
