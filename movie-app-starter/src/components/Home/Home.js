@@ -73,7 +73,7 @@ class Home extends Component {
         this.setState({ loading: true });
         if (this.state.searchTerm === '') {
             // will load more popular movies (on home page)
-            endpoint = `${API_URL}movie/top_rated?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`;
+            endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`;
         } else {
             // will load more movies on the searched page
             endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`;
