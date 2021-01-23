@@ -18,20 +18,12 @@ const App = () => {
       <React.Fragment>
         <Header />
         <Switch>
-          <Route 
-            // shows home component, exact= MEANS URL HAS TO BE EXACTLY THIS PATH TO SHOW/render
-            path="/" component={Home} exact 
-          />
-          <Route 
-            // create variable to grab the specific movie id
-            // will be sent in by the link (tells react router that we want the variable in the path)
-            path="/single-movie/:movieId" component={Movie}  
-          />
+          <Route path="/" component={Home} exact />
+          <Route path="/single-movie/:movieId" component={Movie} />
           <Route path="/NowPlaying" component={NowPlaying} />
           <Route path="/TopRated" component={TopRated} />
           <Route path="/Upcoming" component={Upcoming} />
           <Route path={'/about'}><About /></Route>
-          <Route path="/about" component={About} />
           <Route path={'/favourites'}><Favourites /></Route>
           <Route component={NotFound} />
         </Switch>
