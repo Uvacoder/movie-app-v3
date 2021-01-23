@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
 
             <div className="copyright">
-                <p>&copy; {year} Filmdex</p>
+                <p>&copy; {year} MoviesGo</p>
             </div>
 
         </footer>
