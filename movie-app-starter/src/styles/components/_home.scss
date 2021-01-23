@@ -46,10 +46,9 @@
       font-size: 0.8em;
       margin: 5px 2px;
     }
-    .form-top-rated,
-    .form-upcoming,
-    .form-now-playing,
-    .form-popular-active {
+    div:not(.vertical-form) {
+      font-size: 0.8em;
+      margin: 5px 2px;
       border: 2px solid $green;
       border-radius: 25px;
       padding: 0px 10px;
