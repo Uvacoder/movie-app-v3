@@ -2,45 +2,53 @@
 
 const Favourites = () => (
 
+  /*
+  
+  Using global hooks to add a favorites section
+  Notes:
+  - install npm i use-global-hook in CD
+  
+  */
 
 
-/*
-  state = {
-    favourites: [],
-    setFavourites: []
-}
 
-  const addFavouriteMovie = (movie) => {
-		const newFavouriteList = [...favourites, movie];
-		setFavourites(newFavouriteList);
-	};
-}
-*/
-
-
-/*
-
-  componentWillMount() {
-    localStorage.getItem('fave-movie') && this.setState( {
-      fave-movie: JSON.parse(localStorage.getItem('fave-movie')),
-    })
+  /*
+    state = {
+      favourites: [],
+      setFavourites: []
   }
+  
+    const addFavouriteMovie = (movie) => {
+      const newFavouriteList = [...favourites, movie];
+      setFavourites(newFavouriteList);
+    };
+  }
+  */
 
-  componentDidMount() {
-    if(!localStorage.getItem('fave-movie')) {
-      this.fetchData();
-    } else {
-      console.log()
+
+  /*
+  
+    componentWillMount() {
+      localStorage.getItem('fave-movie') && this.setState( {
+        fave-movie: JSON.parse(localStorage.getItem('fave-movie')),
+      })
     }
-  }
-*/
-/*
-addFaveMovies = () => {
-  const { movieId, addToFavee } = this.state;
-  localStorage.setItem('addToFavee', addToFavee);
-  localStorage.setItem('movieId', addToFavee ? movieId : '');
-};
-*/
+  
+    componentDidMount() {
+      if(!localStorage.getItem('fave-movie')) {
+        this.fetchData();
+      } else {
+        console.log()
+      }
+    }
+  */
+  /*
+  addFaveMovies = () => {
+    const { movieId, addToFavee } = this.state;
+    localStorage.setItem('addToFavee', addToFavee);
+    localStorage.setItem('movieId', addToFavee ? movieId : '');
+  };
+  */
 
 
 
