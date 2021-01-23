@@ -115,22 +115,26 @@ class Home extends Component {
                 </div>
 
                 <div className="header-form-select">
+                    <div className="form-popular">
+                        <Link to="/">Popular</Link>
+                    </div>
+
+                    <div className="vertical-form"></div>
+
                     <div className="form-top-rated">
-                        <Link to="/TopRated">
-                            <p>Top Rated</p>
-                        </Link>
+                        <Link to="/TopRated">Top Rated</Link>
                     </div>
+
                     <div className="vertical-form"></div>
+
                     <div className="form-upcoming">
-                        <Link to="/Upcoming">
-                            <p>Upcoming</p>
-                        </Link>
+                        <Link to="/Upcoming">Upcoming</Link>
                     </div>
+
                     <div className="vertical-form"></div>
+
                     <div className="form-now-playing">
-                        <Link to="/NowPlaying">
-                            <p>Now Playing</p>
-                        </Link>
+                        <Link to="/NowPlaying">Now Playing</Link>
                     </div>
                 </div>
 
