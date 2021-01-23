@@ -6,10 +6,8 @@
 <link rel="stylesheet" href="https://use.typekit.net/jbp8oya.css">
 */
 
-
 // Functions
 //@import './utilities/functions.scss';
-
 
 // Settings
 @import "./base/settings";
@@ -19,11 +17,13 @@
 
 // Resets
 @import "./base/reset";
-@import './base/type';
+@import "./base/type";
 
-// Components 
-@import './components/_body.scss';
-@import "./components/actor";
+// Components
+@import "./components/_about.scss";
+@import "./components/_actor";
+@import "./components/_body.scss";
+@import "./components/_favourites";
 @import "./components/footer";
 @import "./components/_header.scss";
 @import "./components/home";
@@ -33,14 +33,15 @@
 @import "./components/movie-info";
 @import "./components/movie-thumb";
 @import "./components/movie";
-@import "./components/navigation";
 @import "./components/nav-bar";
+@import "./components/navigation";
+@import "./components/not-found";
+@import "./components/now-playing";
 @import "./components/search-bar";
 @import "./components/six-col-grid";
 @import "./components/spinner";
-
-
-
+@import "./components/top-rated";
+@import "./components/_upcoming";
 
 /*
 // Components (v1)

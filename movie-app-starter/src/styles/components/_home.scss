@@ -24,6 +24,7 @@
   margin-top: 30px;
   padding-left: 200px;
   padding-right: 200px;
+  padding-bottom: 50px;
   text-transform: uppercase;
 }
 
@@ -32,18 +33,23 @@
 }
 
 @media screen and (max-width: $tablet) {
+  .header-form-select-wrapper {
+    text-align: center;
+  }
   .header-form-select {
     padding-left: 10px;
     padding-right: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    div p {
+    //display: block;
+    div {
       font-size: 0.8em;
-      margin: 5px 5px;
+      margin: 5px 2px;
     }
-    .form-top-rated p,
-    .form-upcoming p,
-    .form-now-playing p {
+    .form-top-rated,
+    .form-upcoming,
+    .form-now-playing,
+    .form-popular-active {
       border: 2px solid $green;
       border-radius: 25px;
       padding: 0px 10px;
@@ -58,7 +64,7 @@
   .header-form-select {
     padding-left: 25px;
     padding-right: 25px;
-    div p {
+    div {
       font-size: 0.9em;
     }
     .vertical-form {
@@ -67,19 +73,10 @@
   }
 }
 
-.form-top-rated p {
-  color: $green;
-  font-family: $boldFont;
-  font-size: 1.1em;
-  font-weight: 600;
-}
-.form-upcoming p {
-  color: $green;
-  font-family: $boldFont;
-  font-size: 1.1em;
-  font-weight: 600;
-}
-.form-now-playing p {
+.form-top-rated,
+.form-upcoming,
+.form-now-playing,
+.form-popular-active {
   color: $green;
   font-family: $boldFont;
   font-size: 1.1em;

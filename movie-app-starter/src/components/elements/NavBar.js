@@ -9,28 +9,34 @@ import About from '../elements/About';
 const NavBar = (props) => {
     const [showNav, setShowNav] = useState();
     const navItems = [
-        <div className="side-home-button">
-            <div className="side-home-logo">
-                <Link to={'/'}><img src="/../images/home_button_icon.png" alt="Home Button Icon" /></Link>
+        <Link to={'/'}>
+            <div className="side-home-button">
+                <div className="side-home-logo">
+                    <img src="/../images/home_button_icon.png" alt="Home Button Icon" />
+                </div>
+                <div className="side-home-name">Home</div>
             </div>
-            <Link to={'/'}><div className="side-home-name">Home</div></Link>
-        </div>,
-        <div className="side-favourites-button">
-            <div className="side-favourites-logo">
-                <Link to={'/favourites'}><img src="/../images/favourite_icon.png" alt="Favourite Icon" /></Link>
+        </Link>,
+        <Link to={'/favourites'}>
+            <div className="side-favourites-button">
+                <div className="side-favourites-logo">
+                    <img src="/../images/favourite_icon.png" alt="Favourite Icon" />
+                </div>
+                <div className="side-favourites-link">
+                    <div className="side-favourites-name">Favourites</div>
+                </div>
             </div>
-            <div className="side-favourites-link">
-                <Link to={'/favourites'}><div className="side-favourites-name">Favourites</div></Link>
+        </Link>,
+        <Link to={'/about'}>
+            <div className="side-about-button">
+                <div className="side-about-logo">
+                    <img src="/../images/about_icon.png" alt="About Icon" />
+                </div>
+                <div className="side-about-link">
+                    <div className="side-about-name">About</div>
+                </div>
             </div>
-        </div>,
-        <div className="side-about-button">
-            <div className="side-about-logo">
-                <Link to={'/about'}><img src="/../images/about_icon.png" alt="About Icon" /></Link>
-            </div>
-            <div className="side-about-link">
-                <Link to={'/about'}><div className="side-about-name">About</div></Link>
-            </div>
-        </div>,
+        </Link>,
     ];
 
     const title = <div className="nav-bar-logo">
