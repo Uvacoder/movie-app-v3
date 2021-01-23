@@ -34,20 +34,22 @@ class Movie extends Component {
             //
             this.setState({ loading: true })
             // First fetch the movie...
-
+            // fetches the movie variable that is created 
             const endpoint = `${API_URL}movie/${this.props.match.params.movieId}?api_key=${API_KEY}&language=en-US`;
+            // it then fetches the items to endpoint
             this.fetchItems(endpoint);
         }
     }
-    
+    // method for fetch items with uses endpoint as the parameter
     fetchItems = (endpoint) => {
         fetch(endpoint)
             // get results from^ fetch endpoint, so convert results using json
             .then(result => result.json())
             .then(result => {
-                //  
+                // does a check to make sure that if the API doesnt return anything  
                 if (result.status_code) {
                     this.setState({ loading: false });
+                    // means nothing is loading...^^^
                 } else {
                     // fill the movie state WITH the reuslt FOR the movie
                     this.setState({ movie: result }, () => {
@@ -82,11 +84,20 @@ class Movie extends Component {
             <div className="movie">
                 {this.state.movie ?
                     <div>
-                        <Navigation movie={this.props.location.movieName} />
-                        <MovieInfo movie={this.state.movie} directors={this.state.directors} />
-                        <MovieInfoBar time={this.state.movie.runtime} budget={this.state.movie.budget} revenue={this.state.movie.revenue} />
+                        <Navigation 
+                            movie={this.props.location.movieName} 
+                        />
+                        <MovieInfo 
+                            movie={this.state.movie} 
+                            directors={this.state.directors} 
+                        />
+                        <MovieInfoBar 
+                            time={this.state.movie.runtime} 
+                            budget={this.state.movie.budget} 
+                            revenue={this.state.movie.revenue} 
+                        />
                     </div>
-                    : null}
+                : null}
                 {this.state.actors ?
                     <div className="movie-grid">
                         <SixColGrid header={'Actors'}>
@@ -95,7 +106,7 @@ class Movie extends Component {
                             })}
                         </SixColGrid>
                     </div>
-                    : null}
+                : null}
 
                 {!this.state.actors && !this.state.loading ? <h1>Sorry, no movie was found.</h1> : null}
                 {this.state.loading ? <Spinner /> : null}

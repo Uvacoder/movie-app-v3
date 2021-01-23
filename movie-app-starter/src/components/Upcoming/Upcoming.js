@@ -25,17 +25,18 @@ class Upcoming extends Component {
 
     // check if component has mounted
     componentDidMount() {
-        if (localStorage.getItem('HomeState')) {
+     /*   if (localStorage.getItem('HomeState')) {
             const state = JSON.parse(localStorage.getItem('HomeState'));
             this.setState({ ...state });
-        } else {
+        } else {*/
             this.setState({ loading: true });
             // Specify API URL (Start by calling the popular movies first)
             // URL first, then API key
-            const endpoint = `${API_URL}movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`;
+           const endpoint = `${API_URL}movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`;
+            console.log(`${API_URL}movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`);
             // send endpoint to the method
-            this.fetchItems(endpoint);
-        }
+           this.fetchItems(endpoint);
+       /* } */
     }
 
     // search functinality 

@@ -9,12 +9,12 @@ import NowPlaying from '../NowPlaying/NowPlaying';
 import TopRated from '../TopRated/TopRated';
 import NotFound from '../elements/NotFound';
 import Favourites from '../elements/Favourites';
-import About from '../elements/About';
+import About from '../elements/About'
 
 const App = () => {
 
   return (
-    <BrowserRouter basename="/ReactMovieDB">
+    <BrowserRouter >
       <React.Fragment>
         <Header />
         <Switch>
@@ -24,12 +24,14 @@ const App = () => {
           />
           <Route 
             // create variable to grab the specific movie id
-            path="/:movieId" component={Movie} exact 
+            // will be sent in by the link (tells react router that we want the variable in the path)
+            path="/single-movie/:movieId" component={Movie}  
           />
-          <Route path="/Upcoming" component={Upcoming} exact/>
           <Route path="/NowPlaying" component={NowPlaying} />
           <Route path="/TopRated" component={TopRated} />
+          <Route path="/Upcoming" component={Upcoming} />
           <Route path={'/about'}><About /></Route>
+          <Route path="/about" component={About} />
           <Route path={'/favourites'}><Favourites /></Route>
           <Route component={NotFound} />
         </Switch>
@@ -38,6 +40,9 @@ const App = () => {
     </BrowserRouter>
   )
 }
+
+
+
 
 
 export default App;

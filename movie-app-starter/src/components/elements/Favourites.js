@@ -2,6 +2,49 @@
 
 const Favourites = () => (
 
+
+
+/*
+  state = {
+    favourites: [],
+    setFavourites: []
+}
+
+  const addFavouriteMovie = (movie) => {
+		const newFavouriteList = [...favourites, movie];
+		setFavourites(newFavouriteList);
+	};
+}
+*/
+
+
+/*
+
+  componentWillMount() {
+    localStorage.getItem('fave-movie') && this.setState( {
+      fave-movie: JSON.parse(localStorage.getItem('fave-movie')),
+    })
+  }
+
+  componentDidMount() {
+    if(!localStorage.getItem('fave-movie')) {
+      this.fetchData();
+    } else {
+      console.log()
+    }
+  }
+*/
+/*
+addFaveMovies = () => {
+  const { movieId, addToFavee } = this.state;
+  localStorage.setItem('addToFavee', addToFavee);
+  localStorage.setItem('movieId', addToFavee ? movieId : '');
+};
+*/
+
+
+
+
   <section className="favourite-section">
 
     <h2>Favourites</h2>
