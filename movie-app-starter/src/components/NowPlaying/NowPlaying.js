@@ -133,7 +133,7 @@ class NowPlaying extends Component {
 
                     <div className="vertical-form"></div>
 
-                    <div className="form-now-playing">
+                    <div className="form-now-playing-active">
                         <Link to="/NowPlaying">Now Playing</Link>
                     </div>
                 </div>

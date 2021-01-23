@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 //import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config';
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from '../../config';
 import SearchBar from '../elements/SearchBar';
@@ -6,7 +7,7 @@ import SixColGrid from '../elements/SixColGrid';
 import MovieThumb from '../elements/MovieThumb';
 import LoadMoreBtn from '../elements/LoadMoreBtn';
 import Spinner from '../elements/Spinner';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 // note: add a "not found" image when movie posters don't show up
 
@@ -23,31 +24,34 @@ class Upcoming extends Component {
         searchTerm: ''
     }
 
+    /*
+    ==========================================================================================================================================
+    Function to Mount/Call API
+    */
     // check if component has mounted
     componentDidMount() {
-     /*   if (localStorage.getItem('HomeState')) {
-            const state = JSON.parse(localStorage.getItem('HomeState'));
-            this.setState({ ...state });
-        } else {*/
-            this.setState({ loading: true });
-            // Specify API URL (Start by calling the popular movies first)
-            // URL first, then API key
-           const endpoint = `${API_URL}movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`;
-            console.log(`${API_URL}movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`);
-            // send endpoint to the method
-           this.fetchItems(endpoint);
-       /* } */
+        this.setState({ loading: true });
+        // Specify API URL (Start by calling the popular movies first)
+        // URL first, then API key
+        const endpoint = `${API_URL}movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`;
+        // send endpoint to the method
+        this.fetchItems(endpoint);
     }
 
-    // search functinality 
+    /*
+    ==========================================================================================================================================
+    Function for Search 
+    */
     searchItems = (searchTerm) => {
         let endpoint = '';
         this.setState({
+            // clear movies and only show what is searched
             movies: [],
+            // show loading screen on bottom
             loading: true,
+            // sets the searchterm INTO the state
             searchTerm
         })
-
         // check to see if theres anything in the search term
         if (searchTerm === '') {
             // if not, populate the the movie with popular movies
@@ -59,12 +63,14 @@ class Upcoming extends Component {
         // use fetchITem to grab the movies
         this.fetchItems(endpoint);
     }
-
-    // populates more popular movies 
+    
+    /*
+    ==========================================================================================================================================
+    Function for Loading more Movies 
+    */
     loadMoreItems = () => {
         let endpoint = '';
         this.setState({ loading: true });
-
         if (this.state.searchTerm === '') {
             // will load more popular movies (on home page)
             endpoint = `${API_URL}movie/upcoming?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`;
@@ -74,77 +80,97 @@ class Upcoming extends Component {
         }
         this.fetchItems(endpoint);
     }
-
-    // feth items methods
+    
+    /*
+    ==========================================================================================================================================
+    Function for Fetching Data from API and distributing
+    */
     fetchItems = (endpoint) => {
         fetch(endpoint)
-            // (then, waits for the result) use json to convert results from the raw data
-            .then(result => result.json())
-            .then(result => {
-                // get data into state
-                this.setState({
-                    // load new movies while appeneding the movies to the older ones
-                    movies: [...this.state.movies, ...result.results],
-                    loading: false,
-                    currentPage: result.page,
-                    totalPages: result.total_pages
-                }, () => {
-                    if (this.state.searchTerm === "") {
-                        localStorage.setItem('HomeState', JSON.stringify(this.state));
-                    }
-                })
+        // (then, waits for the result) use json to convert results from the raw data
+        .then(result => result.json())
+        .then(result => {
+            // get data into state
+            this.setState({
+                // load new movies while appeneding the movies to the older ones
+                movies: [...this.state.movies, ...result.results],
+                loading: false,
+                currentPage: result.page,
+                totalPages: result.total_pages
             })
-            .catch(error => console.error('Error:', error))
+        })
+        .catch(error => console.error('Error:', error))
     }
 
+    /*
+    ==========================================================================================================================================
+    Render Function
+    */
     render() {
         return (
-            <div className="upcoming">
+            <div className="home">
+                
                 <div>
-                    <SearchBar callback={this.searchItems} />
+                <SearchBar callback={this.searchItems} />
                 </div>
 
                 <div className="header-form-select">
                     <div className="form-popular">
-                        <Link to="././Home">
-                            <p>Popular</p>
-                        </Link>
+                        <Link to="/">Popular</Link>
                     </div>
+
                     <div className="vertical-form"></div>
+
                     <div className="form-top-rated">
-                        <Link to="././TopRated">
-                            <p>Top Rated</p>
-                        </Link>
+                        <Link to="/TopRated">Top Rated</Link>
                     </div>
+
                     <div className="vertical-form"></div>
+
+                    <div className="form-upcoming-active">
+                        <Link to="/Upcoming">Upcoming</Link>
+                    </div>
+
+                    <div className="vertical-form"></div>
+
                     <div className="form-now-playing">
-                        <Link to="././NowPlaying">
-                            <p>Now Playing</p>
-                        </Link>
+                        <Link to="/NowPlaying">Now Playing</Link>
                     </div>
                 </div>
 
-                <div className="upcoming-grid">
+                <div className="home-grid">
                     <SixColGrid
-                        header={this.state.searchTerm ? 'Search Result' : 'Upcoming'}
+                        // creates the header to show the title of Form and or the title of the searcg result.
+                        //header={this.state.searchTerm ? 'Search Result' : 'Popular'}
+
+                        // prop for loading animation
                         loading={this.state.loading}
                     >
-                        {this.state.movies.map((element, i) => {
-                            return <MovieThumb
-                                key={i}
-                                clickable={true}
-                                image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
-                                movieId={element.id}
-                                movieName={element.original_title}
-                                movieRating={element.vote_average}
-                            />
-                        })}
-                    </SixColGrid>
-                    {this.state.loading ? <Spinner /> : null}
-                    {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ?
-                        <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} />
-                        : null}
 
+                    {this.state.movies.map((element, i) => {
+                        // returns the movie thumb with it's props
+                        return <MovieThumb
+                            key={i}
+                            // allows user to click on thumbnail
+                            clickable={true}
+                            //checks the image poster path. TERNARY, if there are no image, go to fall back image (no image.png)
+                            image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
+                            // start of using the link
+                            movieId={element.id}
+                            movieName={element.original_title}
+                            movieRating={element.vote_average}
+                            movieRelease={element.release_date}
+                            movieOverview={element.overview}
+                            movieGenre={element.genres_movie_list}
+                        />
+                    })}
+                    </SixColGrid>
+
+                    {this.state.loading ? <Spinner /> : null}
+                    
+                    {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ?
+                        // Ternary to check and see if page is in loading state or not
+                        <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} /> : null}
                 </div>
             </div>
         )

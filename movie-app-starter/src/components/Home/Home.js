@@ -115,7 +115,7 @@ class Home extends Component {
                 </div>
 
                 <div className="header-form-select">
-                    <div className="form-popular">
+                    <div className="form-popular-active">
                         <Link to="/">Popular</Link>
                     </div>
 
