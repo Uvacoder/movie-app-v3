@@ -1,4 +1,6 @@
-/* MovieInfo.js */
+// ===========================================================================
+// Movie Info Card - Shows Title, Overview, Rating, Director, Poster
+
 .movieinfo {
   background-size: cover !important;
   background-position: center !important;
@@ -88,6 +90,9 @@
   margin: 0;
 }
 
+// ===========================================================================
+// Mobile Version
+
 @media screen and (max-width: $tablet) {
   .movieinfo-content {
     .movieinfo-thumb {
@@ -117,6 +122,9 @@
     }
   }
 }
+
+// ===========================================================================
+// Tablet Version
 
 @media screen and (min-width: $tablet) and (max-width: $desktop) {
   .movieinfo-content {

@@ -1,4 +1,5 @@
-/* SearchBar.js */
+// ===========================================================================
+// Search Bar
 .searchbar {
   width: 100%;
   height: 50px;
@@ -9,7 +10,6 @@
   color: $green;
 }
 
-/* search bar styling */
 .searchbar-content {
   max-width: 1280px;
   width: 50%;
@@ -21,14 +21,13 @@
   border-bottom: 3px solid $green;
 }
 
-/* search icon */
+// Search Icon
 .searchbar-content img {
   width: 50px;
 }
 
-/* input bar */
+// Input Bar
 .searchbar-input {
-  font-family: "Roboto", sans-serif;
   font-size: 1.2em;
   position: absolute;
   left: 50px;
@@ -39,7 +38,7 @@
   color: #fff;
 }
 
-/* "Search" placeholder text */
+// "Search" placeholder text
 .searchbar-input::placeholder {
   color: $green;
   font-size: 1.2em;
@@ -50,7 +49,9 @@
   outline: none;
 }
 
-//@media screen and (max-width: 720px) {
+// ===========================================================================
+// Mobile Version
+
 @media screen and (max-width: $tablet) {
   .searchbar-content {
     width: 80%;
