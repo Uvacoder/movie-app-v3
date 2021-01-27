@@ -3,8 +3,8 @@ import { API_URL, API_KEY } from '../../config';
 import Navigation from '../elements/Navigation';
 import MovieInfo from '../elements/MovieInfo';
 import MovieInfoBar from '../elements/MovieInfoBar';
-//import SixColGrid from '../elements/SixColGrid';
-import SixColGrid from '../elements/SixColGrid-MW';
+import SixColGrid from '../elements/SixColGrid';
+//import SixColGrid from '../elements/SixColGrid-MW';
 import Actor from '../elements/Actor';
 import Spinner from '../elements/Spinner';
 

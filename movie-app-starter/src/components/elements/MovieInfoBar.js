@@ -11,7 +11,7 @@ const MovieInfoBar = ( {movie, checkFav} ) => {
       <div className="movieinfobar-content">
 
         <div className="movieinfobar-content-col">
-          <span className="movieinfobar-info"><b>Runtime:</b> {calcTime(movie.time)}</span>
+          <span className="movieinfobar-info"><b>Runtime:</b> {calcTime(movie.runtime)}</span>
           <span className="movieinfobar-info"><b>Budget:</b> {convertMoney(movie.budget)}</span>
           <span className="movieinfobar-info"><b>Revenue:</b> {convertMoney(movie.revenue)}</span>
         </div>

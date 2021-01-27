@@ -26,10 +26,25 @@ const SixColGrid = ({ movies, header, loading }) => {
   }*/
 
   const renderElements = (movies) => {
+  
       return movies.map((movie, i) => {
-        return <MovieThumb key={i} movie={movie} />
+      
+        return (
+          <div className="grid-element">
+            <MovieThumb key={i} movie= {movie} />
+          </div>
+        ) 
       })
+      
   }
+
+
+  const test = () => {
+
+  }
+
+  <div className="grid-element"></div>
+
 
   return (
     <div className="grid">
@@ -38,8 +53,9 @@ const SixColGrid = ({ movies, header, loading }) => {
       <div className="grid-content">
     
         {renderElements(movies)}
+        </div>
       </div>
-    </div>
+   
   )
 }
 

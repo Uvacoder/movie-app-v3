@@ -1,7 +1,7 @@
 import React from 'react';
 import { IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config';
-//import MovieThumb from './MovieThumb';
-import MovieThumb from './MovieThumb-MW';
+import MovieThumb from './MovieThumb';
+//import MovieThumb from './MovieThumb-MW';
 
 
 // shows the main movie info (title, overview, rating, etc) on a single movie page

@@ -1,5 +1,9 @@
 /* MovieInfo.js */
 
+.moviethumg img {
+  width: 70px;
+}
+
 .moviethumb-details {
   width: auto;
   height: 50px;
@@ -39,6 +43,16 @@
   height: 45px;
   text-align: center;
   align-self: flex-end;
+}
+
+.moviethumb-overview {
+  padding-top: 6px;
+  font-size: 0.7em;
+}
+
+.moviethumb-release {
+  padding-top:8px;
+  font-size: 0.7em;
 }
 
 .moviethumb-release,
