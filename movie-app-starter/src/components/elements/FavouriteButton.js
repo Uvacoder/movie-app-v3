@@ -4,10 +4,10 @@
 import useGlobal from '../../store/globalAppState';
 import heartEmpty from '../../images/heart-empty.png';
 import heartFull from '../../images/heart-full.png';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+//import { Link } from 'react-router-dom';
+//import PropTypes from 'prop-types';
 
-function FavouriteButton({ props, checkFav }) {
+function FavouriteButton({ movie, checkFav }) {
 
     const [globalState, globalActions] = useGlobal();
 
@@ -18,21 +18,22 @@ function FavouriteButton({ props, checkFav }) {
         }
         // checks whether the movie is in the favs movie
         // array...
-        return globalState.favs.some((props) => props.id === id);
+        return globalState.favs.some((movie) => movie.id === id);
 
     }
 
     return (
         <div className="favourite">
-            {!checkFav ?
+            {console.log(movie)}
+            {!checkFav || isFav(movie.id) ?
                 <button className="btn-favourite"
                     onMouseDown={(e) => { e.preventDefault(); }}
-                    onClick={() => { globalActions.removeFav(props.id); }}>
+                    onClick={() => { globalActions.removeFav(movie.id); }}>
                     <img src={heartFull} alt="Full Heart" />
                 </button> :
                 <button className="btn-favourite"
                     onMouseDown={(e) => { e.preventDefault(); }}
-                    onClick={() => { globalActions.addFav(props); }}>
+                    onClick={() => { globalActions.addFav(movie); }}>
                     <img src={heartEmpty} alt="Empty Heart" />
                 </button>
             }
