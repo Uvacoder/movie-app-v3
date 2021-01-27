@@ -3,8 +3,7 @@ import { API_URL, API_KEY } from '../../config';
 import Navigation from '../elements/Navigation';
 import MovieInfo from '../elements/MovieInfo';
 import MovieInfoBar from '../elements/MovieInfoBar';
-//import SixColGrid from '../elements/SixColGrid';
-import SixColGrid from '../elements/SixColGrid-MW';
+import SixColGrid from '../elements/SixColGrid';
 import Actor from '../elements/Actor';
 import Spinner from '../elements/Spinner';
 
@@ -93,8 +92,9 @@ class Movie extends Component {
                             directors={this.state.directors} 
                         />
                         <MovieInfoBar 
-                            movie = {this.state.movie}
-                           
+                            time={this.state.movie.runtime} 
+                            budget={this.state.movie.budget} 
+                            revenue={this.state.movie.revenue} 
                         />
                     </div>
                 : null}

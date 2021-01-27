@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import SideNav, { MenuIcon } from 'react-simple-sidenav';
 import { Link } from 'react-router-dom';
-//import Favourites from '../elements/Favourites';
-//import About from '../elements/About';
+import Favourites from '../elements/Favourites';
+import About from '../elements/About';
 
 // shows the pop out navigation bar (home, favorites, about)
 const NavBar = (props) => {
