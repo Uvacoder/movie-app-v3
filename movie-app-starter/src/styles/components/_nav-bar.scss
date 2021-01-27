@@ -1,14 +1,13 @@
-// ===========================================================================
-// Sliding Navigation Bar
-
+// Nav
 // Logo for Sidemenu
 .side-home-logo,
 .side-favourites-logo,
 .side-about-logo img {
     width: 40px;
+    //margin-right: 10px;
 }
 
-// Navigation Names
+/* Navigation Names */
 .side-home-name,
 .side-favourites-name,
 .side-about-name {
@@ -17,17 +16,39 @@
     font-weight: bold;
 }
 
-// Grids for Each Row
-.side-about-button,
-.side-favourites-button,
+/* Grids for Each Row */
 .side-home-button {
     display: flex;
     justify-content: space-between;
 }
 
-.side-about-name,
-.side-favourites-name,
 .side-home-name {
+    margin-top: 5px;
+}
+.side-favourites-button {
+    display: flex;
+    justify-content: space-between;
+    /*
+    display: grid;
+    grid-template-areas: "favourites favourites-name";
+    justify-content: space-between;
+    margin-top: 25px;
+    */
+}
+.side-favourites-name {
+    margin-top: 5px;
+}
+.side-about-button {
+    display: flex;
+    justify-content: space-between;
+    /*
+    display: grid;
+    grid-template-areas: "about about-name";
+    justify-content: space-between;
+    margin-top: 25px;
+    */
+}
+.side-about-name {
     margin-top: 5px;
 }
 
@@ -43,3 +64,4 @@
 .nav-bar-logo img {
     width: 250px;
 }
+

@@ -1,7 +1,6 @@
-// ===========================================================================
-// Movie Thumb - The individual "thumb" element in the movies or actors grid
+/* MovieInfo.js */
 
-.moviethumb img {
+.moviethumg img {
   width: 70px;
 }
 
@@ -26,7 +25,7 @@
   font-size: 0.9em;
   font-weight: bold;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: nowrap; /* Don't forget this one */
   text-overflow: ellipsis;
 }
 
@@ -52,7 +51,7 @@
 }
 
 .moviethumb-release {
-  padding-top: 8px;
+  padding-top:8px;
   font-size: 0.7em;
 }
 
@@ -61,12 +60,9 @@
   color: $bodyFont;
   margin: 5px 0px;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: nowrap; /* Don't forget this one */
   text-overflow: ellipsis;
 }
-
-// ===========================================================================
-// Mobile Version
 
 @media screen and (max-width: 600px) {
   .moviethumb-overview,
@@ -87,7 +83,7 @@
   }
   .moviethumb-title:hover {
     overflow: hidden;
-    white-space: nowrap;
+    white-space: nowrap; /* Don't forget this one */
     text-overflow: ellipsis;
   }
 }
@@ -114,7 +110,7 @@
   text-transform: uppercase;
 }
 
-// Decreased opacity on hover
+/* decreased opacity on hover */
 .moviethumb-moreinfo button:hover {
   opacity: 0.8;
 }
@@ -134,7 +130,7 @@
   }
 }
 
-// Movie info "card" on single movie page
+/* movie info "card" on single movie page */
 .movieinfo-content {
   max-width: 1280px;
   width: 100%;
@@ -143,10 +139,6 @@
   background: rgb(18, 22, 39, 0.95);
   position: relative;
 }
-
-// ===========================================================================
-// Mobile Version
-
 @media screen and (max-width: $tablet) {
   .movieinfo-content {
     background: rgb(18, 22, 39, 0.7);
