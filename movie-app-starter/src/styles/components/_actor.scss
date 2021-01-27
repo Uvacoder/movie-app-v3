@@ -1,3 +1,4 @@
+// ===========================================================================
 // Actors in Movie
 
 .actor {
@@ -13,11 +14,8 @@
 }
 
 .actor-name {
-  font-family: "Roboto", sans-serif;
   font-size: 1em;
   font-weight: 700;
-  color: $bodyFont;
-  display: block;
   margin: 0px 0px 0px 0px;
   width: 40%;
   box-sizing: border-box;
@@ -25,12 +23,10 @@
 }
 
 .actor-character {
-  font-family: "Roboto", sans-serif;
   font-size: 0.9em;
   font-weight: 600;
-  color: $bodyFont;
   display: block;
-  margin: 0px 0px 10px 10px;
+  margin: 0px 0px 10px 0px;
   width: 80%;
   box-sizing: border-box;
 }

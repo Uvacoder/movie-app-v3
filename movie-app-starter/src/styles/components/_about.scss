@@ -1,4 +1,5 @@
-// About Page
+// ===========================================================================
+// About Page - Mobile Version
 
 .about-section {
     padding: 5px 25px 100px 25px;
@@ -27,10 +28,14 @@
     }
 }
 
+// ===========================================================================
+// Desktop / Tablet Version
+
 @media screen and (min-width: $tablet) {
     .about-section-wrapper {
         display: flex;
         justify-content: center;
+
         p {
             max-width: 700px;
         }
