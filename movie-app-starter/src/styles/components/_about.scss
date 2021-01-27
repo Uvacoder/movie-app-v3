@@ -1,20 +1,10 @@
-// About Page Styling
-// ===========================================================================
-// About Page - Mobile Version
+// About Page
 
 .about-section {
     padding: 5px 25px 100px 25px;
 
     p {
         text-align: center;
-        color: $bodyFont;
-        font-weight: 600;
-    }
-
-    p:nth-child(5) {
-        color: $green;
-        font-style: italic;
-        padding: 250px 0px 0px 0px;
     }
 
     h2 {
@@ -34,14 +24,5 @@
     img {
         height: auto;
         width: 75px;
-    }
-}
-
-// ===========================================================================
-// Desktop Version
-@media only screen and (min-width: $tablet) {
-    // About Page - Desktop Version
-    .about-section p:nth-child(5) {
-        padding: 150px 0px 0px 0px;
     }
 }
