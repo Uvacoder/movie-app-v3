@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from '../../config';
 import SixColGrid from '../elements/SixColGrid-MW';
+import SearchBar from '../elements/SearchBar-MW';
 
 function Home(){
 
@@ -22,11 +23,17 @@ function Home(){
 
     }, []);
 
+
+    const handleSetMovies = (movies) => {
+        console.log(movies);
+        //setMovies(movies);
+    }
+
     return (
         <div className="home">
 
             <div>
-                {/*<SearchBar callback={this.searchItems} />*/}
+            <SearchBar handleSetMovies={handleSetMovies} />
             </div>
             <div className="header-form-select-wrapper">
                 <div className="header-form-select">

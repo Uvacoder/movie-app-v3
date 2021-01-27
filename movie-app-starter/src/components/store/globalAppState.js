@@ -1,11 +1,11 @@
 import React from 'react';
 import globalHook from 'use-global-hook';
 
-function getFavs() {
+function getFavs(){
     let favsFromStorage = localStorage.getItem('movie-app-favs');
-    if (favsFromStorage === null) {
+    if(favsFromStorage === null){
         favsFromStorage = [];
-    } else {
+    }else{
         favsFromStorage = JSON.parse(favsFromStorage);
     }
     return favsFromStorage;
@@ -17,9 +17,9 @@ const actions = {
         const newFavs = [...store.state.favs, movie];
 
         const newFavsForStorage = JSON.stringify(newFavs);
-
+        
         localStorage.setItem('movie-app-favs', newFavsForStorage);
-
+        
         store.setState({ favs: newFavs });
 
     },
@@ -29,16 +29,16 @@ const actions = {
 
         const indexOfMovieToRemove = currentFavs.findIndex((movie) => movie.id === id);
         currentFavs.splice(indexOfMovieToRemove, 1);
-
+    
         let favsForStorage = JSON.stringify(currentFavs);
         localStorage.setItem('movie-app-favs', favsForStorage);
-
+        
         store.setState({ favs: currentFavs });
 
     },
     setFavs: (store) => {
         store.setState({ favs: getFavs() })
-    }
+    } 
 }
 
 const initialState = {
