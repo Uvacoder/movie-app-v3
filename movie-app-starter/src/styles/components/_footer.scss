@@ -1,3 +1,4 @@
+// ===========================================================================
 // Footer
 
 footer {
@@ -33,7 +34,7 @@ footer {
             width: 50px;
             padding: 10px;
         }
-        /* decreased opacity on hover */
+        // Decreased opacity on hover
         img:hover {
             opacity: 0.8;
         }
@@ -51,8 +52,10 @@ footer {
         margin-bottom: 15px;
         line-height: 0.5;
     }
+
     // ===========================================================================
     // Desktop Version
+
     @media only screen and (min-width: $tablet) {
         text-align: left;
 
@@ -100,6 +103,10 @@ footer {
                 "contact-info   social      address";
         }
     }
+
+    // ===========================================================================
+    // Tablet Version
+
     @media only screen and (min-width: $mobile) and (max-width: $desktop) {
         hr {
             margin: 0px 0px 100px 0px;

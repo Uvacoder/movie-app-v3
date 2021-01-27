@@ -1,4 +1,6 @@
-/* Home.js */
+// ===========================================================================
+// Home Version
+
 .home {
   margin-bottom: 100px;
 }
@@ -32,6 +34,19 @@
   border-left: 2.5px solid $green;
 }
 
+.form-top-rated,
+.form-upcoming,
+.form-now-playing,
+.form-popular-active {
+  color: $green;
+  font-family: $boldFont;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+// ===========================================================================
+// Mobile Version
+
 @media screen and (max-width: $tablet) {
   .header-form-select-wrapper {
     text-align: center;
@@ -41,11 +56,12 @@
     padding-right: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    //display: block;
+
     div {
       font-size: 0.8em;
       margin: 5px 2px;
     }
+
     div:not(.vertical-form) {
       font-size: 0.8em;
       margin: 5px 2px;
@@ -53,31 +69,26 @@
       border-radius: 25px;
       padding: 0px 10px;
     }
+
     .vertical-form {
       border-left: none;
     }
   }
 }
 
+// ===========================================================================
+// Tablet Version
 @media screen and (min-width: $tablet) and (max-width: $desktop) {
   .header-form-select {
     padding-left: 25px;
     padding-right: 25px;
+
     div {
       font-size: 0.9em;
     }
+
     .vertical-form {
       border-left: 1px solid $green;
     }
   }
-}
-
-.form-top-rated,
-.form-upcoming,
-.form-now-playing,
-.form-popular-active {
-  color: $green;
-  font-family: $boldFont;
-  font-size: 1.1em;
-  font-weight: 600;
 }

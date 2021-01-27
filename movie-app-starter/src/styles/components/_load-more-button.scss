@@ -1,4 +1,6 @@
-/* LoadMoreBtn.js */
+// ===========================================================================
+// Load More Button
+
 .loadmorebtn {
   background: $green;
   width: 200px;
@@ -18,7 +20,8 @@
   font-weight: 700;
   text-transform: uppercase;
 }
-/* decreased opacity on hover */
+
+// Decreased opacity on hover
 .loadmorebtn:hover {
   opacity: 0.8;
 }
