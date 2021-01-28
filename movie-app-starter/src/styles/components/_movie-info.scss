@@ -1,4 +1,6 @@
-/* MovieInfo.js */
+// ===========================================================================
+// Movie Info - Shows title, poster, overview, rating, director
+
 .movieinfo {
   background-size: cover !important;
   background-position: center !important;
@@ -117,6 +119,9 @@
     }
   }
 }
+
+// ===========================================================================
+// Tablet Version
 
 @media screen and (min-width: $tablet) and (max-width: $desktop) {
   .movieinfo-content {

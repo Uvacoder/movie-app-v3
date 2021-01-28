@@ -1,4 +1,5 @@
-/* SixColGrid.js */
+// ===========================================================================
+// Six Column Grid - 6 on desktop, 4 on small tablet, 3 on large phone, 2 on small phone
 
 .grid-content {
   display: grid;
@@ -23,7 +24,9 @@
   }
 }
 
-//@media screen and (max-width: 720px) {
+// ===========================================================================
+// Mobile Version
+
 @media screen and (max-width: 480px) {
   .grid-content {
     grid-template-columns: auto auto;
@@ -39,11 +42,17 @@
   }
 }
 
+// ===========================================================================
+// Small Tablet Version
+
 @media screen and (min-width: 480px) and (max-width: 719px) {
   .grid-content {
     grid-template-columns: auto auto auto;
   }
 }
+
+// ===========================================================================
+// Large Tablet Version
 
 @media screen and (min-width: 719px) and (max-width: 960px) {
   .grid-content {
