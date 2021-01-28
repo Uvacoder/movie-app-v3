@@ -1,7 +1,7 @@
 // Favourites
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import useGlobal from '../store/globalAppState';
+import useGlobal from '../Store/globalAppState';
 import SixColGrid from './SixColGrid-MW';
 /*
 import useGlobal from '../store/globalAppState';
