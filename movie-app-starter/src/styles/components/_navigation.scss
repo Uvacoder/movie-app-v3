@@ -28,8 +28,8 @@
   margin: 0;
 }
 
-.main-navigation-content img {
-  width: 23px;
-  height: 23px;
-  margin-top: 8px;
+.nav-back-button:active,
+.nav-back-button:hover {
+  color: $lilac;
 }
+
