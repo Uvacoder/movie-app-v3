@@ -7,10 +7,8 @@ const Navigation = (movie) => {
     <div className="main-navigation">
       <div className="main-navigation-content">
         <Link to="/">
-          <p>Home</p>
+          <p> &#5176; Back </p>
         </Link>
-        <p>/</p>
-        <p>{movie.original_title}</p>
       </div>
     </div>
   )
