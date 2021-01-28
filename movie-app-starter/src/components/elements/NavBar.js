@@ -41,7 +41,7 @@ const NavBar = () => {
     ];
 
     const title = <div className="nav-bar-logo">
-        <Link to={'/'}><img className="side-logo" src="/../images/database_logo_green.png" alt='Movie Database Logo' /></Link>
+        <Link to={'/'}><img className="side-logo" src="../../images/filmdex_logo_2.png" alt='Movie Database Logo' /></Link>
     </div>
 
     return (
