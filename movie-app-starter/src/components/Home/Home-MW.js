@@ -120,7 +120,7 @@ class Home extends Component {
                 <div className="header-form-select-wrapper">
                     <div className="header-form-select">
                         <div className="form-popular-active">
-                            <Link to="/">Popular</Link>
+                            <Link>Popular</Link>
                         </div>
 
                         <div className="vertical-form"></div>
