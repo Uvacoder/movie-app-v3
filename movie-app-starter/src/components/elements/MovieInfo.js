@@ -20,7 +20,7 @@ const MovieInfo = (props) => {
         <div className="movieinfo-thumb">
           <MovieThumb
             // Places the thumbmnail in the movie for the "single-movie" page / not clickable
-            image={props.movie.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${props.movie.poster_path}` : './images/no_image.jpg'}
+            image={props.movie.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${props.movie.poster_path}` : '../../images/no_image.jpg'}
             // Not clickable 
             clickable={false}
           />

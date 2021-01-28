@@ -155,7 +155,7 @@ class Home extends Component {
                                 // allows user to click on thumbnail
                                 clickable={true}
                                 //checks the image poster path. TERNARY, if there are no image, go to fall back image (no image.png)
-                                image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
+                                image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : '../../images/no_image.jpg'}
                                 // start of using the link
                                 movieId={element.id}
                                 movieName={element.original_title}

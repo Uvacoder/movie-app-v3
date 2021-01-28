@@ -10,7 +10,7 @@ const Actor = (props) => {
 
     return (
         <div className="actor">
-            <img src={props.actor.profile_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}/${props.actor.profile_path}` : '/../images/no_image.jpg'} alt="Actor Headshot" />
+            <img src={props.actor.profile_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}/${props.actor.profile_path}` : '../../images/no_image.jpg'} alt="Actor Headshot" />
             <span className="actor-name">{props.actor.name}</span>
             <span className="actor-character">{props.actor.character}</span>
         </div>
