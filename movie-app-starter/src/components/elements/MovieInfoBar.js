@@ -17,10 +17,8 @@ const MovieInfoBar = ({ movie, checkFav }) => {
         </div>
 
         <div className="movieinfobar-content-col">
-          <div className="fave">
-            <span className="movieinfobar-info">
-              Favourite <FavouriteButton movie={movie} checkFav={checkFav} />
-            </span>
+          <div className="movieinfobar-favourites">
+            <FavouriteButton movie={movie} checkFav={checkFav} />
           </div>
         </div>
 

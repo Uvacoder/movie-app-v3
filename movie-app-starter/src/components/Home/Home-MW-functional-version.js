@@ -4,15 +4,15 @@ import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from '../../config';
 import SixColGrid from '../elements/SixColGrid-MW';
 import SearchBar from '../elements/SearchBar-MW';
 
-function Home(){
+function Home() {
 
     const [movies, setMovies] = useState(null);
 
     useEffect(() => {
 
         const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
-       
-        const getMovies =  async () => {
+
+        const getMovies = async () => {
             const res = await fetch(endpoint);
             const data = await res.json();
             console.log(data);
@@ -33,7 +33,7 @@ function Home(){
         <div className="home">
 
             <div>
-            <SearchBar handleSetMovies={handleSetMovies} />
+                <SearchBar handleSetMovies={handleSetMovies} />
             </div>
             <div className="header-form-select-wrapper">
                 <div className="header-form-select">
@@ -44,27 +44,27 @@ function Home(){
                     <div className="vertical-form"></div>
 
                     <div className="form-top-rated">
-                        <Link to="/TopRated">Top Rated</Link>
+                        <Link to="/toprated">Top Rated</Link>
                     </div>
 
                     <div className="vertical-form"></div>
 
                     <div className="form-upcoming">
-                        <Link to="/Upcoming">Upcoming</Link>
+                        <Link to="/upcoming">Upcoming</Link>
                     </div>
 
                     <div className="vertical-form"></div>
 
                     <div className="form-now-playing">
-                        <Link to="/NowPlaying">Now Playing</Link>
+                        <Link to="/nowplaying">Now Playing</Link>
                     </div>
                 </div>
             </div>
 
             <div className="home-grid">
-              
+
                 {movies !== null && <SixColGrid movies={movies} />}
-                
+
                 <p>HOME PAGE!!!</p>
 
                 {/*this.state.loading ? <Spinner /> : null */}
@@ -78,5 +78,5 @@ function Home(){
 
 
 }
- 
+
 export default Home;
