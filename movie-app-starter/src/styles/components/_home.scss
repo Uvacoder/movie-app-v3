@@ -44,7 +44,6 @@
   font-weight: 600;
 }
 
-
 // ===========================================================================
 // Mobile Version
 
@@ -74,6 +73,15 @@
     .vertical-form {
       border-left: none;
     }
+  }
+  .form-top-rated,
+  .form-upcoming,
+  .form-now-playing,
+  .form-popular-active {
+    color: $green;
+    font-family: $boldFont;
+    font-size: 1.1em;
+    font-weight: 600;
   }
 }
 

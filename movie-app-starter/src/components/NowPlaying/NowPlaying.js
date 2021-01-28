@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 //import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config';
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from '../../config';
 import SearchBar from '../elements/SearchBar';
@@ -69,7 +69,7 @@ class NowPlaying extends Component {
     ==========================================================================================================================================
     Function for Loading more Movies 
     */
-   loadMoreItems = () => {
+    loadMoreItems = () => {
         let endpoint = '';
         this.setState({ loading: true });
         if (this.state.searchTerm === '') {
@@ -88,19 +88,19 @@ class NowPlaying extends Component {
     */
     fetchItems = (endpoint) => {
         fetch(endpoint)
-        // (then, waits for the result) use json to convert results from the raw data
-        .then(result => result.json())
-        .then(result => {
-            // get data into state
-            this.setState({
-                // load new movies while appeneding the movies to the older ones
-                movies: [...this.state.movies, ...result.results],
-                loading: false,
-                currentPage: result.page,
-                totalPages: result.total_pages
+            // (then, waits for the result) use json to convert results from the raw data
+            .then(result => result.json())
+            .then(result => {
+                // get data into state
+                this.setState({
+                    // load new movies while appeneding the movies to the older ones
+                    movies: [...this.state.movies, ...result.results],
+                    loading: false,
+                    currentPage: result.page,
+                    totalPages: result.total_pages
+                })
             })
-        })
-        .catch(error => console.error('Error:', error))
+            .catch(error => console.error('Error:', error))
     }
 
     /*
@@ -122,19 +122,19 @@ class NowPlaying extends Component {
                     <div className="vertical-form"></div>
 
                     <div className="form-top-rated">
-                        <Link to="/TopRated">Top Rated</Link>
+                        <Link to="/toprated">Top Rated</Link>
                     </div>
 
                     <div className="vertical-form"></div>
 
                     <div className="form-upcoming">
-                        <Link to="/Upcoming">Upcoming</Link>
+                        <Link to="/Uucoming">Upcoming</Link>
                     </div>
 
                     <div className="vertical-form"></div>
 
                     <div className="form-now-playing-active">
-                        <Link to="/NowPlaying">Now Playing</Link>
+                        <Link to="/nowplaying">Now Playing</Link>
                     </div>
                 </div>
 
@@ -147,27 +147,27 @@ class NowPlaying extends Component {
                         loading={this.state.loading}
                     >
 
-                    {this.state.movies.map((element, i) => {
-                        // returns the movie thumb with it's props
-                        return <MovieThumb
-                            key={i}
-                            // allows user to click on thumbnail
-                            clickable={true}
-                            //checks the image poster path. TERNARY, if there are no image, go to fall back image (no image.png)
-                            image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
-                            // start of using the link
-                            movieId={element.id}
-                            movieName={element.original_title}
-                            movieRating={element.vote_average}
-                            movieRelease={element.release_date}
-                            movieOverview={element.overview}
-                            movieGenre={element.genres_movie_list}
-                        />
-                    })}
+                        {this.state.movies.map((element, i) => {
+                            // returns the movie thumb with it's props
+                            return <MovieThumb
+                                key={i}
+                                // allows user to click on thumbnail
+                                clickable={true}
+                                //checks the image poster path. TERNARY, if there are no image, go to fall back image (no image.png)
+                                image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
+                                // start of using the link
+                                movieId={element.id}
+                                movieName={element.original_title}
+                                movieRating={element.vote_average}
+                                movieRelease={element.release_date}
+                                movieOverview={element.overview}
+                                movieGenre={element.genres_movie_list}
+                            />
+                        })}
                     </SixColGrid>
 
                     {this.state.loading ? <Spinner /> : null}
-                    
+
                     {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ?
                         // Ternary to check and see if page is in loading state or not
                         <LoadMoreBtn text="Load More" onClick={this.loadMoreItems} /> : null}

@@ -25,7 +25,7 @@ class Home extends Component {
         searchTerm: ''
     }
 
-   
+
     /*
     ==========================================================================================================================================
     Function to Mount/Call API
@@ -103,13 +103,13 @@ class Home extends Component {
             })
             .catch(error => console.error('Error:', error))
     }
-    
+
     /*
     ==========================================================================================================================================
     Render Function
     */
     render() {
-        
+
 
         return (
             <div className="home">
@@ -126,27 +126,27 @@ class Home extends Component {
                         <div className="vertical-form"></div>
 
                         <div className="form-top-rated">
-                            <Link to="/TopRated">Top Rated</Link>
+                            <Link to="/toprated">Top Rated</Link>
                         </div>
 
                         <div className="vertical-form"></div>
 
                         <div className="form-upcoming">
-                            <Link to="/Upcoming">Upcoming</Link>
+                            <Link to="/upcoming">Upcoming</Link>
                         </div>
 
                         <div className="vertical-form"></div>
 
                         <div className="form-now-playing">
-                            <Link to="/NowPlaying">Now Playing</Link>
+                            <Link to="/nowplaying">Now Playing</Link>
                         </div>
                     </div>
                 </div>
 
                 <div className="home-grid">
-                  
+
                     {this.state.movies !== null && <SixColGrid movies={this.state.movies} />}
-                    
+
 
                     {this.state.loading ? <Spinner /> : null}
 
