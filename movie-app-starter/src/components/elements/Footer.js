@@ -24,9 +24,9 @@ const Footer = () => {
 
                 <div className="social">
                     <h5>Social Media</h5>
-                    <a href="www.instagram.com"><img src="/../images/instagram-icon.png" alt="Instagram Icon" id="instagram-icon"></img></a>
-                    <a href="www.facebook.com"><img src="/../images/facebook-icon.png" alt="Facebook Icon" id="facebook-icon"></img></a>
-                    <a href="www.twitter.com"><img src="/../images/twitter-icon.png" alt="Twitter Icon" id="twitter-icon"></img></a>
+                    <a href="www.instagram.com"><img src="/../../images/instagram-icon.png" alt="Instagram Icon" id="instagram-icon"></img></a>
+                    <a href="www.facebook.com"><img src="/../../images/facebook-icon.png" alt="Facebook Icon" id="facebook-icon"></img></a>
+                    <a href="www.twitter.com"><img src="/../../images/twitter-icon.png" alt="Twitter Icon" id="twitter-icon"></img></a>
                 </div>
 
                 <div className="location">
