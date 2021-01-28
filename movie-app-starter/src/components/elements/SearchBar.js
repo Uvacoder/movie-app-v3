@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+// Search Bar - shows the search bar below the header
 
-// shows the search bar below the header
+import React, { Component } from 'react';
 
 class SearchBar extends Component {
     state = {
@@ -9,15 +9,15 @@ class SearchBar extends Component {
 
     timeout = null;
 
-    // do search method with arrow function
+    // Do search method with arrow function
     doSearch = (event) => {
-        // sets the value from the input key 
+        // Sets the value from the input key 
         this.setState({ value: event.target.value })
-        // waits for user to type something
+        // Waits for user to type something
         clearTimeout(this.timeout);
-        // clear old timeout to set a new one
+        // Clear old timeout to set a new one
         this.timeout = setTimeout(() => {
-            // getting callbakc funciton from props, 
+            // Getting callback funciton from props, 
             this.props.callback(this.state.value);
         }, 500)
     }
@@ -31,9 +31,9 @@ class SearchBar extends Component {
                         type="text"
                         className="searchbar-input"
                         placeholder="Search"
-                        // call back function 
+                        // Call back function 
                         onChange={this.doSearch}
-                        // grab value from state to place into input field
+                        // Grab value from state to place into input field
                         value={this.state.value}
                     />
                 </div>

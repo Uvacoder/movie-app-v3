@@ -1,29 +1,23 @@
+// Movie Thumb - shows each movie on the homepage
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-// shows each movie on the homepage
-/*
-    Format:
-            [x] Poster
-    [x] Title          [x] Rating
-    [] Genres
-    [] Release Date    [] Runtime
-*/
 const MovieThumb = ({ clickable, image, movieId, movieName, movieOverview, movieRelease, movieRating }) => {
     return (
         <div className="moviethumb">
             <div className="movie">
                 {clickable ?
-                // ^ asks if clickable/ then links to pathname that will show up into URL
-                // POSSIBLY CHANGE THIS TO LINK THE THUMBNAIL CLICK TO A NEW PAGE!!!
-                    <Link to={{ 
-                        // grabs the movie id so that it can be grabbed with link to show on URL
-                        pathname: `/single-movie/${movieId}`, 
-                        // sends in the movie name to be shwon in header
-                        movieName: `${movieName}` 
+                    // ^ Asks if clickable/ then links to pathname that will show up into URL
+                    // POSSIBLY CHANGE THIS TO LINK THE THUMBNAIL CLICK TO A NEW PAGE!!!
+                    <Link to={{
+                        // Grabs the movie id so that it can be grabbed with link to show on URL
+                        pathname: `/single-movie/${movieId}`,
+                        // Sends in the movie name to be shwon in header
+                        movieName: `${movieName}`
                     }}>
-                    
+
                         <img src={image} alt="Movie Poster" />
                         <div className="moviethumb-details">
                             <div className="moviethumb-title">{movieName}</div>

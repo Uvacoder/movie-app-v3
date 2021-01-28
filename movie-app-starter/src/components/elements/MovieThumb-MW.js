@@ -1,26 +1,18 @@
+// Movie Thumb - Shows each movie on the homepage
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from '../../config';
+import { IMAGE_BASE_URL, POSTER_SIZE } from '../../config';
 
-//import PropTypes from 'prop-types';
-
-// shows each movie on the homepage
-/*
-    Format:
-            [x] Poster
-    [x] Title          [x] Rating
-    [] Genres
-    [] Release Date    [] Runtime
-*/
-const MovieThumb = ({ movie, movieId }) => {
+const MovieThumb = ({ movie }) => {
     return (
         <div className="moviethumb">
             <div className="movie">
 
                 <Link to={{
-                    // grabs the movie id so that it can be grabbed with link to show on URL
+                    // Grabs the movie id so that it can be grabbed with link to show on URL
                     pathname: `/single-movie/${movie.id}`,
-                    // sends in the movie name to be shwon in header
+                    // Sends in the movie name to be shown in header
                     movieName: `${movie.name}`
                 }}>
 
@@ -29,6 +21,7 @@ const MovieThumb = ({ movie, movieId }) => {
                         <div className="moviethumb-title">{movie.original_title}</div>
                         <div className="moviethumb-overview">{movie.overview}</div>
                         <div className="moviethumb-release">[{movie.release_date}]</div>
+
                     </div>
                     <div className="moviethumb-moreinfo-rating">
                         <div className="moviethumb-moreinfo"><button className="moviethumb-moreinfo-btn"><p>More Info</p></button></div>
@@ -36,12 +29,9 @@ const MovieThumb = ({ movie, movieId }) => {
                     </div>
                 </Link>
 
-
             </div>
         </div>
     )
 }
-
-
 
 export default MovieThumb;

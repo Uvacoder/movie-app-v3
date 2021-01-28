@@ -1,8 +1,9 @@
+// Header - Shows the header on each page
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../elements/NavBar';
 
-// shows the header on each page
 const Header = () => {
   return (
     <div className="movie-site-header">

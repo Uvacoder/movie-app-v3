@@ -1,6 +1,7 @@
+// Not Found Page - shows error page if page doesn't exist
+
 import React from 'react';
 
-// shows error page if page doesn't exist
 const NotFound = () => {
     return (
         <div>

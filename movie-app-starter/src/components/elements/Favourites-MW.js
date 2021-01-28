@@ -1,14 +1,10 @@
 // Favourites
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import useGlobal from '../Store/globalAppState';
-import SixColGrid from './SixColGrid-MW';
-/*
 import useGlobal from '../store/globalAppState';
-import Movies from '/Movies';
-*/
+import SixColGrid from './SixColGrid-MW';
 
-// Favourites
 const Favourites = () => {
 
   const [globalState, globalActions] = useGlobal();
@@ -19,8 +15,6 @@ const Favourites = () => {
     globalActions.setFavs();
     setReady(true);
   }, [globalActions]);
-
-
 
   return (
     <section class="favourites-section">
@@ -52,8 +46,6 @@ const Favourites = () => {
     </section>
 
   );
-
-
 };
 
 export default Favourites;

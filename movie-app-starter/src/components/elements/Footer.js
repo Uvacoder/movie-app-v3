@@ -1,11 +1,11 @@
-// Footer
+// Footer - Shows contact info, social media, and address
+
 import React from 'react';
 
-// determine the current year
+// Determine the current year
 const d = new Date();
 const year = d.getFullYear();
 
-// shows contact info, social media, and address
 const Footer = () => {
 
     return (

@@ -1,3 +1,5 @@
+// Navigation Bar - Shows the pop out navigation bar (home, favorites, about)
+
 // With custom items
 import React, { useState } from 'react';
 import SideNav, { MenuIcon } from 'react-simple-sidenav';
@@ -5,8 +7,7 @@ import { Link } from 'react-router-dom';
 //import Favourites from '../elements/Favourites';
 //import About from '../elements/About';
 
-// shows the pop out navigation bar (home, favorites, about)
-const NavBar = (props) => {
+const NavBar = () => {
     const [showNav, setShowNav] = useState();
     const navItems = [
         <Link to={'/'}>
@@ -42,8 +43,6 @@ const NavBar = (props) => {
     const title = <div className="nav-bar-logo">
         <Link to={'/'}><img className="side-logo" src="/../images/database_logo_green.png" alt='Movie Database Logo' /></Link>
     </div>
-
-
 
     return (
         <div className="nav-bar-styling">

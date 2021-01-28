@@ -1,15 +1,9 @@
-  // Favourites
+// Favourites
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-/*
-import useGlobal from '../store/globalAppState';
-import Movies from '/Movies';
-*/
 
-// Favourites
 const Favourites = () => (
-
-
 
   <section className="favourite-section">
 

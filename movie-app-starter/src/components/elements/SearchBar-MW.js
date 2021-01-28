@@ -1,38 +1,38 @@
+// Search Bar - shows the search bar below the header
+
 import { useState } from 'react';
 import searchIcon from '../../images/search_icon.png';
 import { API_URL, API_KEY } from '../../config';
 
-// shows the search bar below the header
 function SearchBar({ handleSetMovies }) {
-    
+
     const [query, setQuery] = useState('');
 
     let timeout = null;
 
-    // do search method with arrow function
+    // Do search method with arrow function
     const doSearch = (event) => {
-        // sets the value from the input key 
-        setQuery( event.target.value );
+        // Sets the value from the input key 
+        setQuery(event.target.value);
 
-
-        // waits for user to type something
-       // const query = event.target.value.trim();
+        // Waits for user to type something
+        // const query = event.target.value.trim();
         let endpoint;
 
         clearTimeout(timeout);
-        // clear old timeout to set a new one
+        // Clear old timeout to set a new one
         timeout = setTimeout(() => {
-            // getting callbakc funciton from props, 
-            //this.props.callback(this.state.value);
-             // check to see if theres anything in the search term
+            // Getting callback funciton from props, 
+            // this.props.callback(this.state.value);
+            // Check to see if theres anything in the search term
             if (query === '') {
-                // if not, populate the the movie with popular movies
+                // If not, populate the the movie with popular movies
                 endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
             } else {
-                // if so, show the searched movies
+                // If so, show the searched movies
                 endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${query}`;
             }
-            // use fetchITem to grab the movies
+            // Use fetchItem to grab the movies
 
             const fetchItems = async () => {
                 const res = await fetch(endpoint);
@@ -41,7 +41,7 @@ function SearchBar({ handleSetMovies }) {
                 handleSetMovies(movies);
             }
             fetchItems();
-        
+
         }, 500)
     }
 
@@ -53,17 +53,14 @@ function SearchBar({ handleSetMovies }) {
                     type="text"
                     className="searchbar-input"
                     placeholder="Search"
-                    // call back function 
+                    // Call back function 
                     onChange={doSearch}
-                    // grab value from state to place into input field
-                    //value={query}
+                // Grab value from state to place into input field
+                // value={query}
                 />
             </div>
         </div>
     )
-
-
 }
-
 
 export default SearchBar;

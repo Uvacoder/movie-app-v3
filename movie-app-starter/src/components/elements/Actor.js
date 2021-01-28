@@ -1,13 +1,11 @@
+// Actors Page - Shows a list of all actors and their roles who participated in the movie
+
 import React from 'react';
 import { IMAGE_BASE_URL } from '../../config';
 
-// note: maybe add a load more button for actors?
-// also: must add a "not found" image for actor
-
-// shows a list of all actors and their roles who participated in the movie
 const Actor = (props) => {
 
-    // determine size of actor's image on a single movie page
+    // Determine size of actor's image on a single movie page
     const POSTER_SIZE = "w154";
 
     return (

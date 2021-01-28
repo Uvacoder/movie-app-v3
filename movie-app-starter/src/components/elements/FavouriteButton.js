@@ -1,11 +1,8 @@
-// copypasta'd from michael's code
+// Favourite Button
 
-// FavouriteButtons
 import useGlobal from '../../store/globalAppState';
 import heartEmpty from '../../images/heart-empty.png';
 import heartFull from '../../images/heart-full.png';
-//import { Link } from 'react-router-dom';
-//import PropTypes from 'prop-types';
 
 function FavouriteButton({ movie, checkFav }) {
 
@@ -16,8 +13,7 @@ function FavouriteButton({ movie, checkFav }) {
         if (globalState.favs.length === 0) {
             return false;
         }
-        // checks whether the movie is in the favs movie
-        // array...
+        // Check whether the movie is in the favs movie array
         return globalState.favs.some((movie) => movie.id === id);
 
     }
