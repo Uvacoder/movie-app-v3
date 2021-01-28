@@ -18,8 +18,9 @@
 }
 
 .main-navigation-content p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.9em;
+  font-family: $boldFont;
+  font-size: 1.2em;
+  font-weight: 700;
   float: left;
   color: $green;
   text-transform: uppercase;
