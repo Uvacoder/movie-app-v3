@@ -93,32 +93,7 @@
   font-size: 0.8em;
   bottom: 0;
   text-transform: uppercase;
-}
-
-.moviethumb-moreinfo button {
-  text-align: center;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s;
-  margin: 0 auto;
-  bottom: 0;
-  text-transform: uppercase;
-}
-
-.moviethumb-moreinfo p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.8em;
-  padding: 0px 5px;
-  color: $green;
-  font-weight: 700;
-  text-transform: uppercase;
-  bottom: 0;
-}
-
-// Decreased opacity on hover
-.moviethumb-moreinfo button:hover {
-  opacity: 0.8;
+  padding-top: 30px;
 }
 
 .moviethumb-moreinfo-rating {
@@ -158,6 +133,9 @@
   }
   .movieinfo-text p {
     color: $lightBodyFont;
+  }
+  .moviethumb-moreinfo {
+    padding-top: 50px;
   }
 }
 

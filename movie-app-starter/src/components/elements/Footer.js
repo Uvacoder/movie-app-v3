@@ -19,7 +19,7 @@ const Footer = () => {
 
                 <div className="contact-info">
                     <h5>Email</h5>
-                    <p>mbui14@my.bcit.ca<br></br>vnguyen74@my.bcit.ca<br></br>(604)-412-7773</p>
+                    <p>mbui14@my.bcit.ca<br></br>vnguyen74@my.bcit.ca</p>
                 </div>
 
                 <div className="social">
