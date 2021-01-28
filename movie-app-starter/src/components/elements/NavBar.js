@@ -13,7 +13,7 @@ const NavBar = () => {
         <Link to={'/'}>
             <div className="side-home-button">
                 <div className="side-home-logo">
-                    <img src="/../../images/home_button_icon.png" alt="Home Button Icon" />
+                    <img src="../../images/home_button_icon.png" alt="Home Button Icon" />
                 </div>
                 <div className="side-home-name">Home</div>
             </div>
@@ -21,7 +21,7 @@ const NavBar = () => {
         <Link to={'/favourites'}>
             <div className="side-favourites-button">
                 <div className="side-favourites-logo">
-                    <img src="/../../images/favourite_icon.png" alt="Favourite Icon" />
+                    <img src="../../images/favourite_icon.png" alt="Favourite Icon" />
                 </div>
                 <div className="side-favourites-link">
                     <div className="side-favourites-name">Favourites</div>
@@ -31,7 +31,7 @@ const NavBar = () => {
         <Link to={'/about'}>
             <div className="side-about-button">
                 <div className="side-about-logo">
-                    <img src="/../../images/about_icon.png" alt="About Icon" />
+                    <img src="../../images/about_icon.png" alt="About Icon" />
                 </div>
                 <div className="side-about-link">
                     <div className="side-about-name">About</div>

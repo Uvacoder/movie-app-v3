@@ -1,8 +1,8 @@
 // Favourite Button
 
 import useGlobal from '../store/globalAppState';
-import heartEmpty from '../../images/heart-empty.png';
-import heartFull from '../../images/heart-full.png';
+import starEmpty from '../../images/favourite_icon.png';
+import starFull from '../../images/favourite_icon_filled.png';
 
 function FavouriteButton({ movie, checkFav }) {
 
@@ -25,12 +25,12 @@ function FavouriteButton({ movie, checkFav }) {
                 <button className="btn-favourite"
                     onMouseDown={(e) => { e.preventDefault(); }}
                     onClick={() => { globalActions.removeFav(movie.id); }}>
-                    <img src={heartFull} alt="Full Heart" />
+                    <img src={starFull} alt="Full Star" />
                 </button> :
                 <button className="btn-favourite"
                     onMouseDown={(e) => { e.preventDefault(); }}
                     onClick={() => { globalActions.addFav(movie); }}>
-                    <img src={heartEmpty} alt="Empty Heart" />
+                    <img src={starEmpty} alt="Empty Star" />
                 </button>
             }
         </div>

@@ -17,7 +17,7 @@ class SearchBar extends Component {
         clearTimeout(this.timeout);
         // Clear old timeout to set a new one
         this.timeout = setTimeout(() => {
-            // Getting callback funciton from props, 
+            // Getting callback function from props, 
             this.props.callback(this.state.value);
         }, 500)
     }
@@ -26,7 +26,7 @@ class SearchBar extends Component {
         return (
             <div className="searchbar">
                 <div className="searchbar-content">
-                    <img src="/../../images/search_icon.png" alt="Search Icon"></img>
+                    <img src="../../images/search_icon.png" alt="Search Icon"></img>
                     <input
                         type="text"
                         className="searchbar-input"

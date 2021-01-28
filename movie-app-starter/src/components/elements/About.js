@@ -18,7 +18,7 @@ const About = () => (
     </div>
 
     <div class="tmdb-logo">
-      <a href="https://www.themoviedb.org/documentation/api"><img src="/../../images/tmdb-logo.png" alt="TMDB Logo" className="no-hover"></img></a>
+      <a href="https://www.themoviedb.org/documentation/api"><img src="../../images/tmdb-logo.png" alt="TMDB Logo" className="no-hover"></img></a>
     </div>
     <div className="about-section-wrapper">
       <p>This web application uses the <a href="https://www.themoviedb.org/documentation/api">TMDb API</a> but is not endorsed or certified by TMDb. <br></br> For educational purposes only.</p>
