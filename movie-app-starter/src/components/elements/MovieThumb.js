@@ -25,7 +25,7 @@ const MovieThumb = ({ clickable, image, movieId, movieName, movieOverview, movie
                             <div className="moviethumb-release">[{movieRelease}]</div>
                         </div>
                         <div className="moviethumb-moreinfo-rating">
-                            <div className="moviethumb-moreinfo"><button className="moviethumb-moreinfo-btn"><p>More Info</p></button></div>
+                            <div className="moviethumb-moreinfo">More Info</div>
                             <div className="moviethumb-rating">{movieRating}</div>
                         </div>
                     </Link>

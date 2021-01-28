@@ -128,7 +128,7 @@ class Home extends Component {
                     <div className="vertical-form"></div>
 
                     <div className="form-upcoming">
-                        <Link to="/Uucoming">Upcoming</Link>
+                        <Link to="/upcoming">Upcoming</Link>
                     </div>
 
                     <div className="vertical-form"></div>
