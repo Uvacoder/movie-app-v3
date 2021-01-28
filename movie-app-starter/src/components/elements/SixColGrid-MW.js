@@ -9,22 +9,7 @@ import MovieThumb from './MovieThumb-MW';
 
 // Create a functional component that will recieve props and that will return a div with the six col grid
 const SixColGrid = ({ movies, header, loading }) => {
-  /*
-    // const to send in thumbnail 
-    const renderElements = () => {
-      // grabs children from predefined props taht is sent in from home 
-  
-      const gridElements = props.children.map((element, i) => {
-        return (
-          // looping thru children  
-          <div key={i} className="grid-element">
-            
-            {element}
-          </div>
-        )
-      })
-      return gridElements;
-    }*/
+
 
   const renderElements = (movies) => {
 

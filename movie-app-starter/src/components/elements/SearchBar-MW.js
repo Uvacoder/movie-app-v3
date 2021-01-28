@@ -16,14 +16,13 @@ function SearchBar({ handleSetMovies }) {
         setQuery(event.target.value);
 
         // Waits for user to type something
-        // const query = event.target.value.trim();
+     
         let endpoint;
 
         clearTimeout(timeout);
         // Clear old timeout to set a new one
         timeout = setTimeout(() => {
-            // Getting callback funciton from props, 
-            // this.props.callback(this.state.value);
+          
             // Check to see if theres anything in the search term
             if (query === '') {
                 // If not, populate the the movie with popular movies
@@ -55,8 +54,7 @@ function SearchBar({ handleSetMovies }) {
                     placeholder="Search"
                     // Call back function 
                     onChange={doSearch}
-                // Grab value from state to place into input field
-                // value={query}
+            
                 />
             </div>
         </div>

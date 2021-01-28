@@ -1,12 +1,4 @@
-// Copy of NavBar.js => made into Movies.js (thanks to Michael's Fav Tutorial)
-
-// With custom items
 import React, { useState } from 'react';
-import SideNav, { MenuIcon } from 'react-simple-sidenav';
-import { Link } from 'react-router-dom';
-import Favourites from './Favourites';
-import About from './About';
-
 
 function Movies({ movies }) {
 
@@ -15,8 +7,6 @@ function Movies({ movies }) {
         // Function to Mount/Call API
         componentDidMount() {
             this.setState({ loading: true });
-            // Specify API URL (Start by calling the popular movies first)
-            // URL first, then API key
             const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
             // send endpoint to the method
             this.fetchItems(endpoint);
@@ -47,10 +37,6 @@ function Movies({ movies }) {
 
         <div className="home-grid">
             <SixColGrid
-                // creates the header to show the title of Form and or the title of the searcg result.
-                //header={this.state.searchTerm ? 'Search Result' : 'Popular'}
-
-                // prop for loading animation
                 loading={this.state.loading}
             >
 
@@ -61,7 +47,7 @@ function Movies({ movies }) {
                         // allows user to click on thumbnail
                         clickable={true}
                         //checks the image poster path. TERNARY, if there are no image, go to fall back image (no image.png)
-                        image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
+                        image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : '../../images/no_image.jpg'}
                         // start of using the link
                         movieId={element.id}
                         movieName={element.original_title}

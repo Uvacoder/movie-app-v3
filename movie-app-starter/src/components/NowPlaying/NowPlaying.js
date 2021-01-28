@@ -7,13 +7,6 @@ import SixColGrid from '../elements/SixColGrid';
 import MovieThumb from '../elements/MovieThumb';
 import LoadMoreBtn from '../elements/LoadMoreBtn';
 import Spinner from '../elements/Spinner';
-//import { Link } from 'react-router-dom';
-
-// note: add a "not found" image when movie posters don't show up
-
-// home page
-// - has the computing and functions
-// - imports the visual components (searchbar, etc)
 
 class NowPlaying extends Component {
     state = {
@@ -140,10 +133,6 @@ class NowPlaying extends Component {
 
                 <div className="home-grid">
                     <SixColGrid
-                        // creates the header to show the title of Form and or the title of the searcg result.
-                        //header={this.state.searchTerm ? 'Search Result' : 'Popular'}
-
-                        // prop for loading animation
                         loading={this.state.loading}
                     >
 

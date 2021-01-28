@@ -4,19 +4,9 @@ import Navigation from '../elements/Navigation';
 import MovieInfo from '../elements/MovieInfo';
 import MovieInfoBar from '../elements/MovieInfoBar';
 import SixColGrid from '../elements/SixColGrid';
-//import SixColGrid from '../elements/SixColGrid-MW';
 import Actor from '../elements/Actor';
 import Spinner from '../elements/Spinner';
 
-// single movie page
-// - has the computing and functions
-// - imports the visual components (searchbar, etc)
-
-// TO ADD:
-// - release date
-// - genres (crime, drama, thriller?)
-// - related movies (maybe?)
-// - add full favorites button when hover over (take code from footer.js)
 
 class Movie extends Component {
     state = {

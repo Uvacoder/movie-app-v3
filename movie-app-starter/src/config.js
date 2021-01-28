@@ -4,12 +4,6 @@
 const API_URL = 'https://api.themoviedb.org/3/';
 const API_KEY = 'd5da7519903c9c59cced4ae0936f005f';
 
-// NEW API KEY (JAN.21): d5da7519903c9c59cced4ae0936f005f
-// OLD API Key (19944e5a16d594596406f317a9fcd6c6)
-
-// Images
-// An image URL looks like this example:
-// http://image.tmdb.org/t/p/w780/bOGkgRGdhrBYJSLpXaxhXVstddV.jpg
 
 const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/';
 
