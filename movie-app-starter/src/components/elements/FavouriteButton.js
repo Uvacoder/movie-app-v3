@@ -1,6 +1,6 @@
 // Favourite Button
 
-import useGlobal from '../../store/globalAppState';
+import useGlobal from '../store/globalAppState';
 import heartEmpty from '../../images/heart-empty.png';
 import heartFull from '../../images/heart-full.png';
 
