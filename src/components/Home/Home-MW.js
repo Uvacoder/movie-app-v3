@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { API_URL, API_KEY } from '../../config';
 import SearchBar from '../elements/SearchBar';
 import SixColGrid from '../elements/SixColGrid-MW';
