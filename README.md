@@ -1,6 +1,6 @@
 # Here is a live link to the site, enjoy! :D
 http://vnguyen.bcitwebdeveloper.ca/twd-movie-app/ 
-
+-----
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
