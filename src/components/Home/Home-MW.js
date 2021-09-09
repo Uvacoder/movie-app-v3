@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from '../../config';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { API_URL, API_KEY } from '../../config';
 import SearchBar from '../elements/SearchBar';
 import SixColGrid from '../elements/SixColGrid-MW';
 import LoadMoreBtn from '../elements/LoadMoreBtn';
