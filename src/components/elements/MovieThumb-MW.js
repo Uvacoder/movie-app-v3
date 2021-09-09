@@ -16,7 +16,7 @@ const MovieThumb = ({ movie }) => {
                     movieName: `${movie.name}`
                 }}>
 
-                    {movie.poster_path === null ? <img src="./images/no_image.jpg" /> : <img src={`${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}`} alt={movie.title} />}
+                    {movie.poster_path === null ? <img src="./images/no_image.jpg" alt="" /> : <img src={`${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}`} alt={movie.title} />}
                     <div className="moviethumb-details">
                         <div className="moviethumb-title">{movie.original_title}</div>
                         <div className="moviethumb-overview">{movie.overview}</div>
